@@ -1,0 +1,155 @@
+// Magic: 68b895f5
+// Automatically generated PSI dialog (PSI version 17.5.173)
+// Sat Jun  8 09:41:19 2019
+
+
+f_tmp = FLOAT_FIELD;	// dialog.top.ui
+
+viz_color.gad = ROW
+{
+    HSTRETCH
+
+    { WIDTH(1.5) }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("viz_color", "Visualize Color") toggle VALUE(viz_color.val);
+
+    { HSTRETCH }
+
+}
+
+viz_view.gad = ROW
+{
+    HSTRETCH
+
+    { WIDTH(1.5) }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("viz_view", "Visualize View") toggle VALUE(viz_view.val);
+
+    { HSTRETCH }
+
+}
+
+init_scale.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ init_scale.label = PARM_LABEL("Initial Scale", "init_scale") WIDTH(1.5);
+ PARM(float, 1, "init_scale", none, none) RANGE(0,10)
+	 LABELREF(init_scale.label) HSTRETCH;
+
+}
+
+cutter_count.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ cutter_count.label = PARM_LABEL("Cutter Count", "cutter_count") WIDTH(1.5);
+ PARM(integer, 1, "cutter_count", none, none) RANGE(1,100000)
+	 LABELREF(cutter_count.label) HSTRETCH;
+
+}
+
+cutter_seed.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ cutter_seed.label = PARM_LABEL("Cutter Seed", "cutter_seed") WIDTH(1.5);
+ PARM(float, 1, "cutter_seed", none, none) RANGE(0,10)
+	 LABELREF(cutter_seed.label) HSTRETCH;
+
+}
+
+cutter_noise.gad = ROW
+{
+   HSTRETCH
+
+   cutter_noise.label = PARM_LABEL("Cutter Noise", "cutter_noise") WIDTH(1.5);
+   PARM(float, 3, "cutter_noise", none, none, "#1,#2,#3")
+	RANGE(0,10)  LABELREF(cutter_noise.label)
+	HSTRETCH;
+
+}
+
+cutter_offset.gad = ROW
+{
+   HSTRETCH
+
+   cutter_offset.label = PARM_LABEL("Currter Offset", "cutter_offset") WIDTH(1.5);
+   PARM(float, 3, "cutter_offset", none, none, "#1,#2,#3")
+	RANGE(0,10)  LABELREF(cutter_offset.label)
+	HSTRETCH;
+
+}
+
+interior_div.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ interior_div.label = PARM_LABEL("Division", "interior_div") WIDTH(1.5);
+ PARM(float, 1, "interior_div", none, none) RANGE(0,5)
+	 LABELREF(interior_div.label) HSTRETCH;
+
+}
+
+amp_min.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ amp_min.label = PARM_LABEL("Amplitude Min", "amp_min") WIDTH(1.5);
+ PARM(float, 1, "amp_min", none, none) RANGE(0,1)
+	 LABELREF(amp_min.label) HSTRETCH;
+
+}
+
+amp_max.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ amp_max.label = PARM_LABEL("Amplitude Max", "amp_max") WIDTH(1.5);
+ PARM(float, 1, "amp_max", none, none) RANGE(0,1)
+	 LABELREF(amp_max.label) HSTRETCH;
+
+}
+
+folder0.gad = 
+GROUP simple "Interior Detail"
+{ 
+    VALUE(folder0.gad.val) LAYOUT(vertical) HSTRETCH 
+	    interior_div.gad;		
+	    amp_min.gad;		
+	    amp_max.gad;		
+} 
+
+folder1.gad = 
+GROUP simple "Cutter"
+{ 
+    VALUE(folder1.gad.val) LAYOUT(vertical) HSTRETCH 
+	    cutter_count.gad;		
+	    cutter_seed.gad;		
+	    cutter_noise.gad;		
+	    cutter_offset.gad;		
+} 
+
+dialog_norm.gad = 
+{
+    LAYOUT(vertical) SPACING(0.02) HSTRETCH LOOK(plain) 
+    viz_color.gad; 
+    viz_view.gad; 
+    init_scale.gad; 
+    folder1.gad; 
+    folder0.gad; 
+} 
+// dialog.bot.ui
+
+extrastuffstowbar_minimize.val := 1;
+
+dialog = OPENNOTIFIER
+{
+    LAYOUT(vertical) SPACING(0.02) LOOK(bg) VALUE(open.val) HSTRETCH
+
+    { HEIGHT(1p) LOOK(bg) HSTRETCH }
+
+    dialog_norm.gad;
+}

@@ -1,0 +1,303 @@
+// Magic: af281730
+// Automatically generated PSI dialog (PSI version 17.5.173)
+// Thu Sep  5 23:01:13 2019
+
+
+f_tmp = FLOAT_FIELD;	// dialog.top.ui
+polydoctor.row.join =		
+{
+  LAYOUT(horizontal) HSTRETCH JUSTIFY(left, center)
+
+polydoctor.gad = ROW
+{
+    
+
+    PARM_BUTTON("polydoctor", "Polydoctor") toggle VALUE(polydoctor.val);
+
+    {  }
+
+}
+
+fuse.gad = ROW
+{
+    
+
+    PARM_BUTTON("fuse", "Fuse") toggle VALUE(fuse.val);
+
+    {  }
+
+}
+
+cap.gad = ROW
+{
+    
+
+    {  }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("cap", "Cap") toggle VALUE(cap.val);
+
+    {  }
+
+}
+}	// Template join.bot
+
+del_micro_frag.row.join =		
+{
+  LAYOUT(horizontal) HSTRETCH JUSTIFY(left, center)
+
+del_micro_frag.gad = ROW
+{
+    
+
+    PARM_BUTTON("del_micro_frag", "Remove micro fragments") toggle VALUE(del_micro_frag.val);
+
+    {  }
+
+}
+
+micro_frag_thresh.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ micro_frag_thresh.label = PARM_LABEL("Threshold", "micro_frag_thresh") ;
+ PARM(float, 1, "micro_frag_thresh", none, none) RANGE(0,10)
+	 LABELREF(micro_frag_thresh.label) HSTRETCH;
+
+}
+}	// Template join.bot
+
+addto_inside_faces_group.row.join =		
+{
+  LAYOUT(horizontal) HSTRETCH JUSTIFY(left, center)
+
+addto_inside_faces_group.gad = ROW
+{
+    
+
+    PARM_BUTTON("addto_inside_faces_group", "Add inside to group") toggle VALUE(addto_inside_faces_group.val);
+
+    {  }
+
+}
+
+inside_faces_grp_name.gad = ROW
+{
+    HSTRETCH JUSTIFY(left, center)
+
+    inside_faces_grp_name.label = PARM_LABEL("Group name", "inside_faces_grp_name") ;
+    PARM_FIELD(string, "inside_faces_grp_name") VALUE(inside_faces_grp_name.val) 
+	LABELREF(inside_faces_grp_name.label) HSTRETCH;
+
+}
+}	// Template join.bot
+
+create_conn.row.join =		
+{
+  LAYOUT(horizontal) HSTRETCH JUSTIFY(left, center)
+
+create_conn.gad = ROW
+{
+    
+
+    PARM_BUTTON("create_conn", "Create Attr") toggle VALUE(create_conn.val);
+
+    {  }
+
+}
+
+connecttype.gad = 
+{
+    LAYOUT(horizontal) JUSTIFY(left, center) 
+
+    PARM_LABEL_SIMPLE("Connectivity Type", "connecttype") ;
+    { WIDTH(0.09) }
+
+    connecttype.menu;
+
+    {  }
+
+}
+
+attribname.gad = ROW
+{
+    HSTRETCH JUSTIFY(left, center)
+
+    attribname.label = PARM_LABEL(" Name", "attribname") ;
+    PARM_FIELD(string, "attribname") VALUE(attribname.val) 
+	LABELREF(attribname.label) HSTRETCH;
+
+}
+}	// Template join.bot
+
+add_normals.row.join =		
+{
+  LAYOUT(horizontal) HSTRETCH JUSTIFY(left, center)
+
+add_normals.gad = ROW
+{
+    
+
+    PARM_BUTTON("add_normals", "Add Normals") toggle VALUE(add_normals.val);
+
+    {  }
+
+}
+
+type.gad = 
+{
+    LAYOUT(horizontal) JUSTIFY(left, center) 
+
+    PARM_LABEL_SIMPLE(" to", "type") ;
+    { WIDTH(0.09) }
+
+    type.menu;
+
+    {  }
+
+}
+
+cuspangle.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ cuspangle.label = PARM_LABEL(" Cusp Angle", "cuspangle") ;
+ PARM(float, 1, "cuspangle", none, none) RANGE(0,180)
+	LOCK_RANGE LABELREF(cuspangle.label) HSTRETCH;
+
+}
+}	// Template join.bot
+
+
+ptdel.gad = ROW
+{
+    HSTRETCH JUSTIFY(left, center)
+
+    ptdel.label = PARM_LABEL("Point Attributes", "ptdel") WIDTH(1.5);
+    PARM_FIELD(string, "ptdel") VALUE(ptdel.val) 
+	LABELREF(ptdel.label) HSTRETCH;
+
+    ptdel.menu SIZE(0.26, 0.26) LOOK(menuiconbutton);
+
+}
+
+vtxdel.gad = ROW
+{
+    HSTRETCH JUSTIFY(left, center)
+
+    vtxdel.label = PARM_LABEL("Vertex Attributes", "vtxdel") WIDTH(1.5);
+    PARM_FIELD(string, "vtxdel") VALUE(vtxdel.val) 
+	LABELREF(vtxdel.label) HSTRETCH;
+
+    vtxdel.menu SIZE(0.26, 0.26) LOOK(menuiconbutton);
+
+}
+
+primdel.gad = ROW
+{
+    HSTRETCH JUSTIFY(left, center)
+
+    primdel.label = PARM_LABEL("Primitive Attributes", "primdel") WIDTH(1.5);
+    PARM_FIELD(string, "primdel") VALUE(primdel.val) 
+	LABELREF(primdel.label) HSTRETCH;
+
+    primdel.menu SIZE(0.26, 0.26) LOOK(menuiconbutton);
+
+}
+
+dtldel.gad = ROW
+{
+    HSTRETCH JUSTIFY(left, center)
+
+    dtldel.label = PARM_LABEL("Detail Attributes", "dtldel") WIDTH(1.5);
+    PARM_FIELD(string, "dtldel") VALUE(dtldel.val) 
+	LABELREF(dtldel.label) HSTRETCH;
+
+    dtldel.menu SIZE(0.26, 0.26) LOOK(menuiconbutton);
+
+}
+
+sepparm.gad = 
+
+{
+    LAYOUT(vertical) HSTRETCH 
+
+    { HEIGHT(0.1) }
+    SEPARATOR; 
+    { HEIGHT(0.1) }
+}
+
+group1.gad = ROW
+{
+    HSTRETCH JUSTIFY(left, center)
+
+    group1.label = PARM_LABEL("Groups", "group1") WIDTH(1.5);
+    PARM_FIELD(string, "group1") VALUE(group1.val) 
+	LABELREF(group1.label) HSTRETCH;
+
+    group1.menu SIZE(0.26, 0.26) LOOK(menuiconbutton);
+
+}
+
+folder0_4.gad = 
+GROUP simple "Attr/Group Cleanup"
+{ 
+    VALUE(folder0_4.gad.val) LAYOUT(vertical) HSTRETCH 
+	    ptdel.gad;		
+	    vtxdel.gad;		
+	    primdel.gad;		
+	    dtldel.gad;		
+	    sepparm.gad;		
+	    group1.gad;		
+} 
+
+folder0_3.gad = 
+GROUP simple "Normals"
+{ 
+    VALUE(folder0_3.gad.val) LAYOUT(vertical) HSTRETCH 
+	    add_normals.row.join;		
+} 
+
+folder0_2.gad = 
+GROUP simple "Connectivity"
+{ 
+    VALUE(folder0_2.gad.val) LAYOUT(vertical) HSTRETCH 
+	    create_conn.row.join;		
+} 
+
+folder0_1.gad = 
+GROUP simple "Inside Faces"
+{ 
+    VALUE(folder0_1.gad.val) LAYOUT(vertical) HSTRETCH 
+	    addto_inside_faces_group.row.join;		
+} 
+
+folder0.gad = 
+GROUP simple "Geo Cleanup"
+{ 
+    VALUE(folder0.gad.val) LAYOUT(vertical) HSTRETCH 
+	    polydoctor.row.join;		
+	    del_micro_frag.row.join;		
+} 
+
+dialog_norm.gad = 
+{
+    LAYOUT(vertical) SPACING(0.02) HSTRETCH LOOK(plain) 
+    folder0.gad; 
+    folder0_1.gad; 
+    folder0_2.gad; 
+    folder0_3.gad; 
+    folder0_4.gad; 
+} 
+// dialog.bot.ui
+
+extrastuffstowbar_minimize.val := 1;
+
+dialog = OPENNOTIFIER
+{
+    LAYOUT(vertical) SPACING(0.02) LOOK(bg) VALUE(open.val) HSTRETCH
+
+    { HEIGHT(1p) LOOK(bg) HSTRETCH }
+
+    dialog_norm.gad;
+}

@@ -1,0 +1,218 @@
+// Magic: f60d2055
+// Automatically generated PSI dialog (PSI version 17.5.173)
+// Wed Jul  3 23:39:51 2019
+
+
+f_tmp = FLOAT_FIELD;	// dialog.top.ui
+
+attribcreate3_value1v.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ attribcreate3_value1v.label = PARM_LABEL("Init Scale", "attribcreate3_value1v") WIDTH(1.5);
+ PARM(float, 1, "attribcreate3_value1v", none, none) RANGE(0,10)
+	 LABELREF(attribcreate3_value1v.label) HSTRETCH;
+
+}
+
+attribcreate1_value1v.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ attribcreate1_value1v.label = PARM_LABEL("Scale", "attribcreate1_value1v") WIDTH(1.5);
+ PARM(float, 1, "attribcreate1_value1v", none, none) RANGE(0,10)
+	 LABELREF(attribcreate1_value1v.label) HSTRETCH;
+
+}
+
+add_unit_life_ramp.si_rampedit = COLOR_RAMP VALUE(add_unit_life_ramp.ramp_val)
+			LAYOUT(horizontal)  HSTRETCH;
+
+add_unit_life_ramp.multiramp = 
+{
+    LAYOUT(vertical) STRETCH
+
+    ROW
+    {
+	LOOK(plain) JUSTIFY(left,center) SPACING(0.1) VMARGIN(0.02) HSTRETCH
+
+	COL
+	{
+	    JUSTIFY(right,center) WIDTH(1.5)
+	    LABEL "Point No.";
+	}
+
+	add_unit_life_ramp.pointno.gad
+	    = INT_SLIDER_FIELD VALUE(add_unit_life_ramp.pointno.val) HSTRETCH;
+    }
+}
+
+add_unit_life_ramp.buttons.gad = COL
+{
+    VSTRETCH
+
+    ICON_BUTTON_STRIP
+    {
+	LAYOUT(horizontal) INITSIZE(20p, 20p) 
+
+	ACTION_ICONBUTTON "BUTTONS_delete"
+		HELP("Remove Point") VALUE(add_unit_life_ramp.delpoint.val);
+	ACTION_ICONBUTTON "BUTTONS_add"
+		HELP("Add Point") VALUE(add_unit_life_ramp.addpoint.val);
+    }
+
+    { VSTRETCH }
+
+    add_unit_life_ramp.toggleparms.gad
+      = ACTION_ICONBUTTON "BUTTONS_show_controls"
+	HELP("Hide Controls")
+	VALUE(add_unit_life_ramp.toggle.val)
+	SENDSKEY("h.pane.parms.toggle_ramp_parms")
+	LOOKFLAT UI_FLAT_ICON_BTN_SIZE_TINY;
+}
+
+add_unit_life_ramp.parm =
+{
+    LAYOUT(vertical) HSTRETCH JUSTIFY(left, center)
+
+    add_unit_life_ramp.ramp.gad = ROW
+    {
+	MARGIN(0.02) SPACING(0.02) JUSTIFY(left, top) HSTRETCH
+
+	add_unit_life_ramp.buttons.gad VSTRETCH;
+
+	add_unit_life_ramp.si_rampedit HSTRETCH;
+    }
+}
+
+add_unit_life_ramp.gad =
+{
+    LAYOUT(vertical) MARGIN(2p) HSTRETCH
+
+    {
+	LAYOUT(horizontal) HSTRETCH
+
+	PARM_LABEL_SIMPLE("Opacity", "add_unit_life_ramp");
+
+	{ HSTRETCH }
+
+    }
+
+    {
+	LAYOUT(vertical) MARGIN(2p) SPACING(0.02) LOOK(lightline) HSTRETCH
+
+	add_unit_life_ramp.parm;
+
+	SWITCHER tight
+	{
+	    LAYOUT(overlap) VALUE(add_unit_life_ramp.hideparms.val) HSTRETCH
+	    add_unit_life_ramp.multiramp;
+	    {}
+	}
+    }
+}
+
+spriteSmoke_baseColorMap.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH JUSTIFY(left, center)
+
+ spriteSmoke_baseColorMap.label = PARM_LABEL("Color Map", "spriteSmoke_baseColorMap") WIDTH(1.5);
+
+ PARM_FIELD (pathstring, "spriteSmoke_baseColorMap") LABELREF(spriteSmoke_baseColorMap.label)
+	VALUE(spriteSmoke_baseColorMap.val) HSTRETCH;
+
+    spriteSmoke_baseColorMap.menu SIZE(0.26, 0.26) LOOK(menuiconbutton);
+
+ ACTION_ICONBUTTON "BUTTONS_chooser_file" VALUE(spriteSmoke_baseColorMap.plus) LOOKFLAT
+    HELP("Open floating file chooser") UI_FLAT_ICON_BTN_SIZE_SMALL;
+
+}
+
+sepparm.gad = 
+
+{
+    LAYOUT(vertical) HSTRETCH 
+
+    { HEIGHT(0.1) }
+    SEPARATOR; 
+    { HEIGHT(0.1) }
+}
+
+spriteSmoke_baseOpacMap.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH JUSTIFY(left, center)
+
+ spriteSmoke_baseOpacMap.label = PARM_LABEL("Opacity Map", "spriteSmoke_baseOpacMap") WIDTH(1.5);
+
+ PARM_FIELD (pathstring, "spriteSmoke_baseOpacMap") LABELREF(spriteSmoke_baseOpacMap.label)
+	VALUE(spriteSmoke_baseOpacMap.val) HSTRETCH;
+
+    spriteSmoke_baseOpacMap.menu SIZE(0.26, 0.26) LOOK(menuiconbutton);
+
+ ACTION_ICONBUTTON "BUTTONS_chooser_file" VALUE(spriteSmoke_baseOpacMap.plus) LOOKFLAT
+    HELP("Open floating file chooser") UI_FLAT_ICON_BTN_SIZE_SMALL;
+
+}
+
+spriteSmoke_opac_int.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ spriteSmoke_opac_int.label = PARM_LABEL("Opacity Scale", "spriteSmoke_opac_int") WIDTH(1.5);
+ PARM(float, 1, "spriteSmoke_opac_int", none, none) RANGE(0,1)
+	 LABELREF(spriteSmoke_opac_int.label) HSTRETCH;
+
+}
+
+folder0.gad = 
+{
+    LAYOUT(vertical) HSTRETCH
+
+    TABDIALOG2 "folder0.gad"
+    { 
+	VALUE(folder0.gad.val) STRETCH(1,0)
+
+	TAB "Shape"
+	{
+	    LAYOUT(vertical) STRETCH
+
+	    MARGIN(0.05) SPACING(2p)
+	    attribcreate3_value1v.gad;		
+	    attribcreate1_value1v.gad;		
+	    add_unit_life_ramp.gad;		
+
+	    { STRETCH(1,1) LOOK(plain) }
+	}
+
+	TAB "Shading"
+	{
+	    LAYOUT(vertical) STRETCH
+
+	    MARGIN(0.05) SPACING(2p)
+	    spriteSmoke_baseColorMap.gad;		
+	    sepparm.gad;		
+	    spriteSmoke_baseOpacMap.gad;		
+	    spriteSmoke_opac_int.gad;		
+
+	    { STRETCH(1,1) LOOK(plain) }
+	}
+    } 
+}
+
+dialog_norm.gad = 
+{
+    LAYOUT(vertical) SPACING(0.02) HSTRETCH LOOK(plain) 
+    folder0.gad; 
+} 
+// dialog.bot.ui
+
+extrastuffstowbar_minimize.val := 1;
+
+dialog = OPENNOTIFIER
+{
+    LAYOUT(vertical) SPACING(0.02) LOOK(bg) VALUE(open.val) HSTRETCH
+
+    { HEIGHT(1p) LOOK(bg) HSTRETCH }
+
+    dialog_norm.gad;
+}

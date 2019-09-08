@@ -1,0 +1,1 @@
+{"body": [{"indent": 0, "type": "title", "text": ["PackedSequence"]}, {"indent": 0, "type": "para", "extent": [0, 83], "text": ["This example shows how you can use the file sop to \nload a packed disk sequence. "]}], "examplefile": "/examples/nodes/sop/file/PackedSequence.hda", "type": "root", "attrs": {"type": "example"}, "examplefor": "/nodes/sop/file"}

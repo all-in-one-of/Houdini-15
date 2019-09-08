@@ -1,0 +1,1095 @@
+// Magic: bafee087
+// Automatically generated PSI dialog (PSI version 17.5.173)
+// Sun Apr 28 12:43:47 2019
+
+
+f_tmp = FLOAT_FIELD;	// dialog.top.ui
+
+obj_type.gad = 
+{
+    LAYOUT(horizontal) JUSTIFY(left, center) HSTRETCH
+
+    PARM_LABEL_SIMPLE("Object Type", "obj_type") WIDTH(1.5);
+    { WIDTH(0.09) }
+
+    obj_type.menu;
+
+    { HSTRETCH }
+
+}
+
+normal.gad = ROW
+{
+    HSTRETCH
+
+    { WIDTH(1.5) }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("normal", "Normal") toggle VALUE(normal.val);
+
+    { HSTRETCH }
+
+}
+
+cusp_poly.gad = ROW
+{
+    HSTRETCH
+
+    { WIDTH(1.5) }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("cusp_poly", "Cusp Polygons") toggle VALUE(cusp_poly.val);
+
+    { HSTRETCH }
+
+}
+
+type.gad = 
+{
+    LAYOUT(horizontal) JUSTIFY(left, center) HSTRETCH
+
+    PARM_LABEL_SIMPLE("Primitive Type", "type") WIDTH(1.5);
+    { WIDTH(0.09) }
+
+    type.menu;
+
+    { HSTRETCH }
+
+}
+
+surftype.gad = 
+{
+    LAYOUT(horizontal) JUSTIFY(left, center) HSTRETCH
+
+    PARM_LABEL_SIMPLE("Connectivity", "surftype") WIDTH(1.5);
+    { WIDTH(0.09) }
+
+    surftype.menu;
+
+    { HSTRETCH }
+
+}
+
+orient.gad = 
+{
+    LAYOUT(horizontal) JUSTIFY(left, center) HSTRETCH
+
+    PARM_LABEL_SIMPLE("Orientation", "orient") WIDTH(1.5);
+    { WIDTH(0.09) }
+
+    orient.menu;
+
+    { HSTRETCH }
+
+}
+
+size.gad = ROW
+{
+   HSTRETCH
+
+   size.label = PARM_LABEL("Size", "size") WIDTH(1.5);
+   PARM(float, 2, "size", none, none, "X,Y")
+	RANGE(-1,1)  LABELREF(size.label)
+	HSTRETCH;
+
+}
+
+t.gad = ROW
+{
+   HSTRETCH
+
+   t.label = PARM_LABEL("Center", "t") WIDTH(1.5);
+   PARM(float, 3, "t", none, none, "X,Y,Z")
+	RANGE(-1,1)  LABELREF(t.label)
+	HSTRETCH;
+
+}
+
+rows.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ rows.label = PARM_LABEL("Rows", "rows") WIDTH(1.5);
+ PARM(integer, 1, "rows", none, none) RANGE(1,50)
+	LOCK_RANGE_MIN LABELREF(rows.label) HSTRETCH;
+
+}
+
+cols.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ cols.label = PARM_LABEL("Columns", "cols") WIDTH(1.5);
+ PARM(integer, 1, "cols", none, none) RANGE(1,50)
+	LOCK_RANGE_MIN LABELREF(cols.label) HSTRETCH;
+
+}
+
+orderu.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ orderu.label = PARM_LABEL("U Order", "orderu") WIDTH(1.5);
+ PARM(integer, 1, "orderu", none, none) RANGE(2,11)
+	LOCK_RANGE LABELREF(orderu.label) HSTRETCH;
+
+}
+
+orderv.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ orderv.label = PARM_LABEL("V Order", "orderv") WIDTH(1.5);
+ PARM(integer, 1, "orderv", none, none) RANGE(2,11)
+	LOCK_RANGE LABELREF(orderv.label) HSTRETCH;
+
+}
+
+interpu.gad = ROW
+{
+    HSTRETCH
+
+    { WIDTH(1.5) }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("interpu", "End-point interpolate in U") toggle VALUE(interpu.val);
+
+    { HSTRETCH }
+
+}
+
+interpv.gad = ROW
+{
+    HSTRETCH
+
+    { WIDTH(1.5) }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("interpv", "End-point interpolate in V") toggle VALUE(interpv.val);
+
+    { HSTRETCH }
+
+}
+
+type2.gad = 
+{
+    LAYOUT(horizontal) JUSTIFY(left, center) HSTRETCH
+
+    PARM_LABEL_SIMPLE("Primitive Type", "type2") WIDTH(1.5);
+    { WIDTH(0.09) }
+
+    type2.menu;
+
+    { HSTRETCH }
+
+}
+
+surftype2.gad = 
+{
+    LAYOUT(horizontal) JUSTIFY(left, center) HSTRETCH
+
+    PARM_LABEL_SIMPLE("Connectivity", "surftype2") WIDTH(1.5);
+    { WIDTH(0.09) }
+
+    surftype2.menu;
+
+    { HSTRETCH }
+
+}
+
+consolidatepts.gad = ROW
+{
+    HSTRETCH
+
+    { WIDTH(1.5) }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("consolidatepts", "Consolidate Corner Points") toggle VALUE(consolidatepts.val);
+
+    { HSTRETCH }
+
+}
+
+size2.gad = ROW
+{
+   HSTRETCH
+
+   size2.label = PARM_LABEL("Size", "size2") WIDTH(1.5);
+   PARM(float, 3, "size2", none, none, "X,Y,Z")
+	RANGE(-1,1)  LABELREF(size2.label)
+	HSTRETCH;
+
+}
+
+t2.gad = ROW
+{
+   HSTRETCH
+
+   t2.label = PARM_LABEL("Center", "t2") WIDTH(1.5);
+   PARM(float, 3, "t2", none, none, "X,Y,Z")
+	RANGE(-1,1)  LABELREF(t2.label)
+	HSTRETCH;
+
+}
+
+scale.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ scale.label = PARM_LABEL("Uniform Scale", "scale") WIDTH(1.5);
+ PARM(float, 1, "scale", none, none) RANGE(0,10)
+	 LABELREF(scale.label) HSTRETCH;
+
+}
+
+divrate.gad = ROW
+{
+   HSTRETCH
+
+   divrate.label = PARM_LABEL("Axis Divisions", "divrate") WIDTH(1.5);
+   PARM(integer, 3, "divrate", none, none, "#1,#2,#3")
+	RANGE(1,50) LOCK_RANGE_MIN LABELREF(divrate.label)
+	HSTRETCH;
+
+}
+
+orderrate.gad = ROW
+{
+   HSTRETCH
+
+   orderrate.label = PARM_LABEL("Axis Orders", "orderrate") WIDTH(1.5);
+   PARM(integer, 3, "orderrate", none, none, "#1,#2,#3")
+	RANGE(2,11) LOCK_RANGE LABELREF(orderrate.label)
+	HSTRETCH;
+
+}
+dodivs.row.join =		
+{
+  LAYOUT(horizontal) HSTRETCH JUSTIFY(left, center)
+
+dodivs.gad = ROW
+{
+    
+
+    PARM_BUTTON("dodivs", "             ") toggle VALUE(dodivs.val);
+
+    {  }
+
+}
+
+divs.gad = ROW
+{
+   HSTRETCH
+
+   divs.label = PARM_LABEL("Divisions", "divs") ;
+   PARM(integer, 3, "divs", none, none, "X,Y,Z")
+	RANGE(1,50) LOCK_RANGE_MIN LABELREF(divs.label)
+	HSTRETCH;
+
+}
+}	// Template join.bot
+
+
+rebar.gad = ROW
+{
+    HSTRETCH
+
+    { WIDTH(1.5) }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("rebar", "Enforcement Bars") toggle VALUE(rebar.val);
+
+    { HSTRETCH }
+
+}
+
+orientedbbox.gad = ROW
+{
+    HSTRETCH
+
+    { WIDTH(1.5) }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("orientedbbox", "Oriented Bounding Box") toggle VALUE(orientedbbox.val);
+
+    { HSTRETCH }
+
+}
+
+vertexnormals.gad = ROW
+{
+    HSTRETCH
+
+    { WIDTH(1.5) }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("vertexnormals", "Add Vertex Normals") toggle VALUE(vertexnormals.val);
+
+    { HSTRETCH }
+
+}
+
+type3.gad = 
+{
+    LAYOUT(horizontal) JUSTIFY(left, center) HSTRETCH
+
+    PARM_LABEL_SIMPLE("Primitive Type", "type3") WIDTH(1.5);
+    { WIDTH(0.09) }
+
+    type3.menu;
+
+    { HSTRETCH }
+
+}
+
+surftype3.gad = 
+{
+    LAYOUT(horizontal) JUSTIFY(left, center) HSTRETCH
+
+    PARM_LABEL_SIMPLE("Connectivity", "surftype3") WIDTH(1.5);
+    { WIDTH(0.09) }
+
+    surftype3.menu;
+
+    { HSTRETCH }
+
+}
+
+rad.gad = ROW
+{
+   HSTRETCH
+
+   rad.label = PARM_LABEL("Radius", "rad") WIDTH(1.5);
+   PARM(float, 3, "rad", none, none, "X,Y,Z")
+	RANGE(-1,1)  LABELREF(rad.label)
+	HSTRETCH;
+
+}
+
+t3.gad = ROW
+{
+   HSTRETCH
+
+   t3.label = PARM_LABEL("Center", "t3") WIDTH(1.5);
+   PARM(float, 3, "t3", none, none, "X,Y,Z")
+	RANGE(-1,1)  LABELREF(t3.label)
+	HSTRETCH;
+
+}
+
+scale2.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ scale2.label = PARM_LABEL("Uniform Scale", "scale2") WIDTH(1.5);
+ PARM(float, 1, "scale2", none, none) RANGE(0,10)
+	 LABELREF(scale2.label) HSTRETCH;
+
+}
+
+orient2.gad = 
+{
+    LAYOUT(horizontal) JUSTIFY(left, center) HSTRETCH
+
+    PARM_LABEL_SIMPLE("Orientation", "orient2") WIDTH(1.5);
+    { WIDTH(0.09) }
+
+    orient2.menu;
+
+    { HSTRETCH }
+
+}
+
+freq.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ freq.label = PARM_LABEL("Frequency", "freq") WIDTH(1.5);
+ PARM(integer, 1, "freq", none, none) RANGE(1,10)
+	LOCK_RANGE_MIN LABELREF(freq.label) HSTRETCH;
+
+}
+
+rows2.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ rows2.label = PARM_LABEL("Rows", "rows2") WIDTH(1.5);
+ PARM(integer, 1, "rows2", none, none) RANGE(3,50)
+	LOCK_RANGE_MIN LABELREF(rows2.label) HSTRETCH;
+
+}
+
+cols2.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ cols2.label = PARM_LABEL("Columns", "cols2") WIDTH(1.5);
+ PARM(integer, 1, "cols2", none, none) RANGE(3,50)
+	LOCK_RANGE_MIN LABELREF(cols2.label) HSTRETCH;
+
+}
+
+orderu2.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ orderu2.label = PARM_LABEL("U Order", "orderu2") WIDTH(1.5);
+ PARM(integer, 1, "orderu2", none, none) RANGE(2,11)
+	LOCK_RANGE LABELREF(orderu2.label) HSTRETCH;
+
+}
+
+orderv2.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ orderv2.label = PARM_LABEL("V Order", "orderv2") WIDTH(1.5);
+ PARM(integer, 1, "orderv2", none, none) RANGE(2,11)
+	LOCK_RANGE LABELREF(orderv2.label) HSTRETCH;
+
+}
+
+imperfect.gad = ROW
+{
+    HSTRETCH
+
+    { WIDTH(1.5) }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("imperfect", "Imperfect") toggle VALUE(imperfect.val);
+
+    { HSTRETCH }
+
+}
+
+upole.gad = ROW
+{
+    HSTRETCH
+
+    { WIDTH(1.5) }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("upole", "Unique Points per Pole") toggle VALUE(upole.val);
+
+    { HSTRETCH }
+
+}
+
+accurate.gad = ROW
+{
+    HSTRETCH
+
+    { WIDTH(1.5) }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("accurate", "Accurate Bounds") toggle VALUE(accurate.val);
+
+    { HSTRETCH }
+
+}
+
+triangularpoles.gad = ROW
+{
+    HSTRETCH
+
+    { WIDTH(1.5) }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("triangularpoles", "Triangular Poles") toggle VALUE(triangularpoles.val);
+
+    { HSTRETCH }
+
+}
+
+type4.gad = 
+{
+    LAYOUT(horizontal) JUSTIFY(left, center) HSTRETCH
+
+    PARM_LABEL_SIMPLE("Primitive Type", "type4") WIDTH(1.5);
+    { WIDTH(0.09) }
+
+    type4.menu;
+
+    { HSTRETCH }
+
+}
+
+surftype4.gad = 
+{
+    LAYOUT(horizontal) JUSTIFY(left, center) HSTRETCH
+
+    PARM_LABEL_SIMPLE("Connectivity", "surftype4") WIDTH(1.5);
+    { WIDTH(0.09) }
+
+    surftype4.menu;
+
+    { HSTRETCH }
+
+}
+
+orient3.gad = 
+{
+    LAYOUT(horizontal) JUSTIFY(left, center) HSTRETCH
+
+    PARM_LABEL_SIMPLE("Orientation", "orient3") WIDTH(1.5);
+    { WIDTH(0.09) }
+
+    orient3.menu;
+
+    { HSTRETCH }
+
+}
+
+cap.gad = ROW
+{
+    HSTRETCH
+
+    { WIDTH(1.5) }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("cap", "End Caps") toggle VALUE(cap.val);
+
+    { HSTRETCH }
+
+}
+
+consolidatepts2.gad = ROW
+{
+    HSTRETCH
+
+    { WIDTH(1.5) }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("consolidatepts2", "Consolidate Corner Points") toggle VALUE(consolidatepts2.val);
+
+    { HSTRETCH }
+
+}
+
+vertexnormals2.gad = ROW
+{
+    HSTRETCH
+
+    { WIDTH(1.5) }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("vertexnormals2", "Add Vertex Normals") toggle VALUE(vertexnormals2.val);
+
+    { HSTRETCH }
+
+}
+
+t4.gad = ROW
+{
+   HSTRETCH
+
+   t4.label = PARM_LABEL("Center", "t4") WIDTH(1.5);
+   PARM(float, 3, "t4", none, none, "X,Y,Z")
+	RANGE(-1,1)  LABELREF(t4.label)
+	HSTRETCH;
+
+}
+
+rad2.gad = ROW
+{
+   HSTRETCH
+
+   rad2.label = PARM_LABEL("Radius", "rad2") WIDTH(1.5);
+   PARM(float, 2, "rad2", none, none, "#1,#2")
+	RANGE(0,1) LOCK_RANGE_MIN LABELREF(rad2.label)
+	HSTRETCH;
+
+}
+
+radscale.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ radscale.label = PARM_LABEL("Radius Scale", "radscale") WIDTH(1.5);
+ PARM(float, 1, "radscale", none, none) RANGE(0,1)
+	LOCK_RANGE_MIN LABELREF(radscale.label) HSTRETCH;
+
+}
+
+height.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ height.label = PARM_LABEL("Height", "height") WIDTH(1.5);
+ PARM(float, 1, "height", none, none) RANGE(0,10)
+	 LABELREF(height.label) HSTRETCH;
+
+}
+
+rows3.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ rows3.label = PARM_LABEL("Rows", "rows3") WIDTH(1.5);
+ PARM(integer, 1, "rows3", none, none) RANGE(2,50)
+	LOCK_RANGE_MIN LABELREF(rows3.label) HSTRETCH;
+
+}
+
+cols3.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ cols3.label = PARM_LABEL("Columns", "cols3") WIDTH(1.5);
+ PARM(integer, 1, "cols3", none, none) RANGE(3,50)
+	LOCK_RANGE_MIN LABELREF(cols3.label) HSTRETCH;
+
+}
+
+orderu3.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ orderu3.label = PARM_LABEL("U Order", "orderu3") WIDTH(1.5);
+ PARM(integer, 1, "orderu3", none, none) RANGE(2,11)
+	LOCK_RANGE LABELREF(orderu3.label) HSTRETCH;
+
+}
+
+orderv3.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ orderv3.label = PARM_LABEL("V Order", "orderv3") WIDTH(1.5);
+ PARM(integer, 1, "orderv3", none, none) RANGE(2,11)
+	LOCK_RANGE LABELREF(orderv3.label) HSTRETCH;
+
+}
+
+type5.gad = 
+{
+    LAYOUT(horizontal) JUSTIFY(left, center) HSTRETCH
+
+    PARM_LABEL_SIMPLE("Primitive Type", "type5") WIDTH(1.5);
+    { WIDTH(0.09) }
+
+    type5.menu;
+
+    { HSTRETCH }
+
+}
+
+surftype5.gad = 
+{
+    LAYOUT(horizontal) JUSTIFY(left, center) HSTRETCH
+
+    PARM_LABEL_SIMPLE("Connectivity", "surftype5") WIDTH(1.5);
+    { WIDTH(0.09) }
+
+    surftype5.menu;
+
+    { HSTRETCH }
+
+}
+
+orient4.gad = 
+{
+    LAYOUT(horizontal) JUSTIFY(left, center) HSTRETCH
+
+    PARM_LABEL_SIMPLE("Orientation", "orient4") WIDTH(1.5);
+    { WIDTH(0.09) }
+
+    orient4.menu;
+
+    { HSTRETCH }
+
+}
+
+rad3.gad = ROW
+{
+   HSTRETCH
+
+   rad3.label = PARM_LABEL("Radius", "rad3") WIDTH(1.5);
+   PARM(float, 2, "rad3", none, none, "X,Y")
+	RANGE(-1,1)  LABELREF(rad3.label)
+	HSTRETCH;
+
+}
+
+t5.gad = ROW
+{
+   HSTRETCH
+
+   t5.label = PARM_LABEL("Center", "t5") WIDTH(1.5);
+   PARM(float, 3, "t5", none, none, "X,Y,Z")
+	RANGE(-1,1)  LABELREF(t5.label)
+	HSTRETCH;
+
+}
+
+scale3.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ scale3.label = PARM_LABEL("Uniform Scale", "scale3") WIDTH(1.5);
+ PARM(float, 1, "scale3", none, none) RANGE(0,10)
+	 LABELREF(scale3.label) HSTRETCH;
+
+}
+
+rows4.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ rows4.label = PARM_LABEL("Rows", "rows4") WIDTH(1.5);
+ PARM(integer, 1, "rows4", none, none) RANGE(3,50)
+	LOCK_RANGE_MIN LABELREF(rows4.label) HSTRETCH;
+
+}
+
+cols4.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ cols4.label = PARM_LABEL("Columns", "cols4") WIDTH(1.5);
+ PARM(integer, 1, "cols4", none, none) RANGE(3,50)
+	LOCK_RANGE_MIN LABELREF(cols4.label) HSTRETCH;
+
+}
+
+imperfect2.gad = ROW
+{
+    HSTRETCH
+
+    { WIDTH(1.5) }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("imperfect2", "Imperfect") toggle VALUE(imperfect2.val);
+
+    { HSTRETCH }
+
+}
+
+orderu4.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ orderu4.label = PARM_LABEL("U Order", "orderu4") WIDTH(1.5);
+ PARM(integer, 1, "orderu4", none, none) RANGE(2,11)
+	LOCK_RANGE LABELREF(orderu4.label) HSTRETCH;
+
+}
+
+orderv4.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ orderv4.label = PARM_LABEL("V Order", "orderv4") WIDTH(1.5);
+ PARM(integer, 1, "orderv4", none, none) RANGE(2,11)
+	LOCK_RANGE LABELREF(orderv4.label) HSTRETCH;
+
+}
+
+angleu.gad = ROW
+{
+   HSTRETCH
+
+   angleu.label = PARM_LABEL( "U Angle", "angleu" ) WIDTH(1.5);
+   PARM(float, 2, "angleu", none, none) RANGE(0, 360)
+	LABELREF( angleu.label ) HSTRETCH;
+
+}
+
+anglev.gad = ROW
+{
+   HSTRETCH
+
+   anglev.label = PARM_LABEL( "V Angle", "anglev" ) WIDTH(1.5);
+   PARM(float, 2, "anglev", none, none) RANGE(0, 360)
+	LABELREF( anglev.label ) HSTRETCH;
+
+}
+closeu.row.join =		
+{
+  LAYOUT(horizontal) HSTRETCH JUSTIFY(left, center)
+
+closeu.gad = ROW
+{
+    
+
+    PARM_BUTTON("closeu", "U Wrap") toggle VALUE(closeu.val);
+
+    {  }
+
+}
+
+closev.gad = ROW
+{
+    
+
+    {  }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("closev", "V Wrap") toggle VALUE(closev.val);
+
+    {  }
+
+}
+}	// Template join.bot
+
+capu.row.join =		
+{
+  LAYOUT(horizontal) HSTRETCH JUSTIFY(left, center)
+
+capu.gad = ROW
+{
+    
+
+    PARM_BUTTON("capu", "U End Caps") toggle VALUE(capu.val);
+
+    {  }
+
+}
+
+capv.gad = ROW
+{
+    
+
+    {  }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("capv", "V End Caps") toggle VALUE(capv.val);
+
+    {  }
+
+}
+}	// Template join.bot
+
+
+type6.gad = 
+{
+    LAYOUT(horizontal) JUSTIFY(left, center) HSTRETCH
+
+    PARM_LABEL_SIMPLE("Solid Type", "type6") WIDTH(1.5);
+    { WIDTH(0.09) }
+
+    type6.menu;
+
+    { HSTRETCH }
+
+}
+
+orient5.gad = 
+{
+    LAYOUT(horizontal) JUSTIFY(left, center) HSTRETCH
+
+    PARM_LABEL_SIMPLE("Orientation", "orient5") WIDTH(1.5);
+    { WIDTH(0.09) }
+
+    orient5.menu;
+
+    { HSTRETCH }
+
+}
+
+radius.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ radius.label = PARM_LABEL("Radius", "radius") WIDTH(1.5);
+ PARM(float, 1, "radius", none, none) RANGE(0,10)
+	 LABELREF(radius.label) HSTRETCH;
+
+}
+
+t6.gad = ROW
+{
+   HSTRETCH
+
+   t6.label = PARM_LABEL("Position", "t6") WIDTH(1.5);
+   PARM(float, 3, "t6", none, none, "#1,#2,#3")
+	RANGE(0,10)  LABELREF(t6.label)
+	HSTRETCH;
+
+}
+
+folder6.gad = 
+{
+    LAYOUT(vertical) HSTRETCH
+
+    TABDIALOG2 "folder6.gad"
+    { 
+	VALUE(folder6.gad.val) STRETCH(1,0)
+
+	TAB "Torus"
+	{
+	    LAYOUT(vertical) STRETCH
+
+	    MARGIN(2p) SPACING(2p)
+	    type5.gad;		
+	    surftype5.gad;		
+	    orient4.gad;		
+	    rad3.gad;		
+	    t5.gad;		
+	    scale3.gad;		
+	    rows4.gad;		
+	    cols4.gad;		
+
+	    { STRETCH(1,1) LOOK(plain) }
+	}
+
+	TAB "Detail"
+	{
+	    LAYOUT(vertical) STRETCH
+
+	    MARGIN(2p) SPACING(2p)
+	    imperfect2.gad;		
+	    orderu4.gad;		
+	    orderv4.gad;		
+	    angleu.gad;		
+	    anglev.gad;		
+	    closeu.row.join;		
+	    capu.row.join;		
+
+	    { STRETCH(1,1) LOOK(plain) }
+	}
+    } 
+}
+
+folder0.gad = 
+{
+    LAYOUT(vertical) HSTRETCH
+
+    TABDIALOG2 "folder0.gad"
+    { 
+	VALUE(folder0.gad.val) STRETCH(1,0)
+
+	TAB "Grid"
+	{
+	    LAYOUT(vertical) STRETCH
+
+	    MARGIN(0.05) SPACING(2p)
+	    type.gad;		
+	    surftype.gad;		
+	    orient.gad;		
+	    size.gad;		
+	    t.gad;		
+	    rows.gad;		
+	    cols.gad;		
+	    orderu.gad;		
+	    orderv.gad;		
+	    interpu.gad;		
+	    interpv.gad;		
+
+	    { STRETCH(1,1) LOOK(plain) }
+	}
+
+	TAB "Box"
+	{
+	    LAYOUT(vertical) STRETCH
+
+	    MARGIN(0.05) SPACING(2p)
+	    type2.gad;		
+	    surftype2.gad;		
+	    consolidatepts.gad;		
+	    size2.gad;		
+	    t2.gad;		
+	    scale.gad;		
+	    divrate.gad;		
+	    orderrate.gad;		
+	    dodivs.row.join;		
+	    rebar.gad;		
+	    orientedbbox.gad;		
+	    vertexnormals.gad;		
+
+	    { STRETCH(1,1) LOOK(plain) }
+	}
+
+	TAB "Sphere"
+	{
+	    LAYOUT(vertical) STRETCH
+
+	    MARGIN(0.05) SPACING(2p)
+	    type3.gad;		
+	    surftype3.gad;		
+	    rad.gad;		
+	    t3.gad;		
+	    scale2.gad;		
+	    orient2.gad;		
+	    freq.gad;		
+	    rows2.gad;		
+	    cols2.gad;		
+	    orderu2.gad;		
+	    orderv2.gad;		
+	    imperfect.gad;		
+	    upole.gad;		
+	    accurate.gad;		
+	    triangularpoles.gad;		
+
+	    { STRETCH(1,1) LOOK(plain) }
+	}
+
+	TAB "Tube"
+	{
+	    LAYOUT(vertical) STRETCH
+
+	    MARGIN(0.05) SPACING(2p)
+	    type4.gad;		
+	    surftype4.gad;		
+	    orient3.gad;		
+	    cap.gad;		
+	    consolidatepts2.gad;		
+	    vertexnormals2.gad;		
+	    t4.gad;		
+	    rad2.gad;		
+	    radscale.gad;		
+	    height.gad;		
+	    rows3.gad;		
+	    cols3.gad;		
+	    orderu3.gad;		
+	    orderv3.gad;		
+
+	    { STRETCH(1,1) LOOK(plain) }
+	}
+
+	TAB "Torus"
+	{
+	    LAYOUT(vertical) STRETCH
+
+	    MARGIN(0.05) SPACING(2p)
+	    folder6.gad;		
+
+	    { STRETCH(1,1) LOOK(plain) }
+	}
+
+	TAB "Platonic Solid"
+	{
+	    LAYOUT(vertical) STRETCH
+
+	    MARGIN(0.05) SPACING(2p)
+	    type6.gad;		
+	    orient5.gad;		
+	    radius.gad;		
+	    t6.gad;		
+
+	    { STRETCH(1,1) LOOK(plain) }
+	}
+    } 
+}
+
+dialog_norm.gad = 
+{
+    LAYOUT(vertical) SPACING(0.02) HSTRETCH LOOK(plain) 
+    obj_type.gad; 
+    normal.gad; 
+    cusp_poly.gad; 
+    folder0.gad; 
+} 
+// dialog.bot.ui
+
+extrastuffstowbar_minimize.val := 1;
+
+dialog = OPENNOTIFIER
+{
+    LAYOUT(vertical) SPACING(0.02) LOOK(bg) VALUE(open.val) HSTRETCH
+
+    { HEIGHT(1p) LOOK(bg) HSTRETCH }
+
+    dialog_norm.gad;
+}

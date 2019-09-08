@@ -1,0 +1,1 @@
+{"body": [{"indent": 0, "type": "title", "text": ["SimpleCloth"]}, {"indent": 0, "type": "para", "extent": [0, 92], "text": ["This is an example of a simple cloth using verlet integration and simple explicit springs. "]}], "examplefile": "/examples/nodes/sop/solver/SimpleCloth.otl", "type": "root", "attrs": {"type": "example"}, "examplefor": "/nodes/sop/solver"}

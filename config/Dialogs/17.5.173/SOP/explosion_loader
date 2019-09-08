@@ -1,0 +1,479 @@
+// Magic: 4067ec46
+// Automatically generated PSI dialog (PSI version 17.5.173)
+// Thu Sep  5 22:03:06 2019
+
+
+f_tmp = FLOAT_FIELD;	// dialog.top.ui
+input.row.join =		
+{
+  LAYOUT(horizontal) HSTRETCH JUSTIFY(left, center)
+
+input.gad = 
+{
+    LAYOUT(horizontal) JUSTIFY(left, center) 
+
+    PARM_LABEL_SIMPLE("Viewport", "input") WIDTH(1.5);
+    { WIDTH(0.09) }
+
+    input.menu;
+
+    {  }
+
+}
+
+input2.gad = 
+{
+    LAYOUT(horizontal) JUSTIFY(left, center) 
+
+    PARM_LABEL_SIMPLE("         Render", "input2") ;
+    { WIDTH(0.09) }
+
+    input2.menu;
+
+    {  }
+
+}
+}	// Template join.bot
+
+bit_shapes.row.join =		
+{
+  LAYOUT(horizontal) HSTRETCH JUSTIFY(left, center)
+
+bit_shapes.gad = 
+{
+    LAYOUT(horizontal) JUSTIFY(left, center) 
+
+    PARM_LABEL_SIMPLE("Bit Shapes", "bit_shapes") WIDTH(1.5);
+    { WIDTH(0.09) }
+
+    bit_shapes.menu;
+
+    {  }
+
+}
+
+bits_type.gad = 
+{
+    LAYOUT(horizontal) JUSTIFY(left, center) 
+
+    PARM_LABEL_SIMPLE("          Bits Type", "bits_type") ;
+    { WIDTH(0.09) }
+
+    bits_type.menu;
+
+    {  }
+
+}
+}	// Template join.bot
+
+
+path.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH JUSTIFY(left, center)
+
+ path.label = PARM_LABEL("Path", "path") WIDTH(1.5);
+
+ PARM_FIELD (pathstring, "path") LABELREF(path.label)
+	VALUE(path.val) HSTRETCH;
+
+    path.menu SIZE(0.26, 0.26) LOOK(menuiconbutton);
+
+ ACTION_ICONBUTTON "BUTTONS_chooser_file" VALUE(path.plus) LOOKFLAT
+    HELP("Open floating file chooser") UI_FLAT_ICON_BTN_SIZE_SMALL;
+
+}
+
+error.gad = ROW
+{
+    HSTRETCH
+
+    { WIDTH(1.5) }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("error", "Error missing frames") toggle VALUE(error.val);
+
+    { HSTRETCH }
+
+}
+cache.row.join =		
+{
+  LAYOUT(horizontal) HSTRETCH JUSTIFY(left, center)
+
+cache.gad = 
+{
+    LAYOUT(horizontal) JUSTIFY(left, center) 
+
+    PARM_LABEL_SIMPLE("Select Cache", "cache") WIDTH(1.5);
+    { WIDTH(0.09) }
+
+    cache.menu;
+
+    {  }
+
+}
+
+input3.gad = ROW
+{
+    
+
+    {  }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("input3", "Display Trails") toggle VALUE(input3.val);
+
+    {  }
+
+}
+}	// Template join.bot
+
+
+sim.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ sim.label = PARM_LABEL("SimFrame", "sim") WIDTH(1.5);
+ PARM(integer, 1, "sim", none, none) RANGE(1220,1554)
+	 LABELREF(sim.label) HSTRETCH;
+
+}
+
+start.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ start.label = PARM_LABEL("StartFrame", "start") WIDTH(1.5);
+ PARM(integer, 1, "start", none, none) RANGE(1220,1554)
+	 LABELREF(start.label) HSTRETCH;
+
+}
+
+m.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ m.label = PARM_LABEL("Mult", "m") WIDTH(1.5);
+ PARM(float, 1, "m", none, none) RANGE(0,3)
+	 LABELREF(m.label) HSTRETCH;
+
+}
+
+off.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ off.label = PARM_LABEL("Offset", "off") WIDTH(1.5);
+ PARM(integer, 1, "off", none, none) RANGE(0,100)
+	 LABELREF(off.label) HSTRETCH;
+
+}
+load_substeps.row.join =		
+{
+  LAYOUT(horizontal) HSTRETCH JUSTIFY(left, center)
+
+load_substeps.gad = ROW
+{
+    
+
+    PARM_BUTTON("load_substeps", "Load Substeps") toggle VALUE(load_substeps.val);
+
+    {  }
+
+}
+
+substeps.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ substeps.label = PARM_LABEL("Substeps", "substeps") ;
+ PARM(integer, 1, "substeps", none, none) RANGE(1,10)
+	LOCK_RANGE_MIN LABELREF(substeps.label) HSTRETCH;
+
+}
+}	// Template join.bot
+
+
+color.gad = 
+{
+    LAYOUT (horizontal) HSTRETCH
+
+    color.label = PARM_LABEL("Density Color", "color") WIDTH(1.5);
+    PARM(float, 3, "color", none, COLOR, "R,G,B") 
+	LABELREF(color.label) HSTRETCH;
+
+}
+
+fire_color.gad = 
+{
+    LAYOUT (horizontal) HSTRETCH
+
+    fire_color.label = PARM_LABEL("Fire Color", "fire_color") WIDTH(1.5);
+    PARM(float, 3, "fire_color", none, COLOR, "R,G,B") 
+	LABELREF(fire_color.label) HSTRETCH;
+
+}
+
+fire_color_mult.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ fire_color_mult.label = PARM_LABEL("Fire Color Mult", "fire_color_mult") WIDTH(1.5);
+ PARM(float, 1, "fire_color_mult", none, none) RANGE(0,10)
+	 LABELREF(fire_color_mult.label) HSTRETCH;
+
+}
+
+color2.gad = 
+{
+    LAYOUT (horizontal) HSTRETCH
+
+    color2.label = PARM_LABEL("Color", "color2") WIDTH(1.5);
+    PARM(float, 3, "color2", none, COLOR, "R,G,B") 
+	LABELREF(color2.label) HSTRETCH;
+
+}
+
+variation.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ variation.label = PARM_LABEL("Variation", "variation") WIDTH(1.5);
+ PARM(float, 1, "variation", none, none) RANGE(0,0.29999999999999999)
+	LOCK_RANGE_MIN LABELREF(variation.label) HSTRETCH;
+
+}
+
+seed.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ seed.label = PARM_LABEL("Seed", "seed") WIDTH(1.5);
+ PARM(float, 1, "seed", none, none) RANGE(1.0000000000000001e-05,10)
+	 LABELREF(seed.label) HSTRETCH;
+
+}
+
+input4.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ input4.label = PARM_LABEL("Heat", "input4") WIDTH(1.5);
+ PARM(float, 1, "input4", none, none) RANGE(0,5)
+	 LABELREF(input4.label) HSTRETCH;
+
+}
+
+input5.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ input5.label = PARM_LABEL("Vel", "input5") WIDTH(1.5);
+ PARM(float, 1, "input5", none, none) RANGE(0,5)
+	 LABELREF(input5.label) HSTRETCH;
+
+}
+
+input6.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ input6.label = PARM_LABEL("Temperature", "input6") WIDTH(1.5);
+ PARM(float, 1, "input6", none, none) RANGE(0,5)
+	 LABELREF(input6.label) HSTRETCH;
+
+}
+
+input7.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ input7.label = PARM_LABEL("Density", "input7") WIDTH(1.5);
+ PARM(float, 1, "input7", none, none) RANGE(0,5)
+	 LABELREF(input7.label) HSTRETCH;
+
+}
+
+exp.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ exp.label = PARM_LABEL("Density Exp", "exp") WIDTH(1.5);
+ PARM(float, 1, "exp", none, none) RANGE(0,5)
+	 LABELREF(exp.label) HSTRETCH;
+
+}
+
+render_settings.gad = ROW
+{
+    HSTRETCH
+
+    { WIDTH(1.5) }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("render_settings", "Use viewport settings for render") toggle VALUE(render_settings.val);
+
+    { HSTRETCH }
+
+}
+
+input8.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ input8.label = PARM_LABEL("Heat", "input8") WIDTH(1.5);
+ PARM(float, 1, "input8", none, none) RANGE(0,5)
+	 LABELREF(input8.label) HSTRETCH;
+
+}
+
+input9.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ input9.label = PARM_LABEL("Vel", "input9") WIDTH(1.5);
+ PARM(float, 1, "input9", none, none) RANGE(0,5)
+	 LABELREF(input9.label) HSTRETCH;
+
+}
+
+input10.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ input10.label = PARM_LABEL("Temperature", "input10") WIDTH(1.5);
+ PARM(float, 1, "input10", none, none) RANGE(0,5)
+	 LABELREF(input10.label) HSTRETCH;
+
+}
+
+input11.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ input11.label = PARM_LABEL("Density", "input11") WIDTH(1.5);
+ PARM(float, 1, "input11", none, none) RANGE(0,5)
+	 LABELREF(input11.label) HSTRETCH;
+
+}
+
+exp2.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ exp2.label = PARM_LABEL("Density Exp", "exp2") WIDTH(1.5);
+ PARM(float, 1, "exp2", none, none) RANGE(0,5)
+	 LABELREF(exp2.label) HSTRETCH;
+
+}
+
+folder0.gad = 
+{
+    LAYOUT(vertical) HSTRETCH
+
+    TABDIALOG2 "folder0.gad"
+    { 
+	VALUE(folder0.gad.val) STRETCH(1,0)
+
+	TAB "Render"
+	{
+	    LAYOUT(vertical) STRETCH
+
+	    MARGIN(0.05) SPACING(2p)
+	    input8.gad;		
+	    input9.gad;		
+	    input10.gad;		
+	    input11.gad;		
+	    exp2.gad;		
+
+	    { STRETCH(1,1) LOOK(plain) }
+	}
+    } 
+}
+
+folder2.gad = 
+{
+    LAYOUT(vertical) HSTRETCH
+
+    TABDIALOG2 "folder2.gad"
+    { 
+	VALUE(folder2.gad.val) STRETCH(1,0)
+
+	TAB "Viewport Volumes"
+	{
+	    LAYOUT(vertical) STRETCH
+
+	    MARGIN(2p) SPACING(2p)
+	    input4.gad;		
+	    input5.gad;		
+	    input6.gad;		
+	    input7.gad;		
+	    exp.gad;		
+
+	    { STRETCH(1,1) LOOK(plain) }
+	}
+    } 
+}
+
+folder1.gad = 
+{
+    LAYOUT(vertical) HSTRETCH
+
+    TABDIALOG2 "folder1.gad"
+    { 
+	VALUE(folder1.gad.val) STRETCH(1,0)
+
+	TAB "Retime"
+	{
+	    LAYOUT(vertical) STRETCH
+
+	    MARGIN(0.05) SPACING(2p)
+	    sim.gad;		
+	    start.gad;		
+	    m.gad;		
+	    off.gad;		
+	    load_substeps.row.join;		
+
+	    { STRETCH(1,1) LOOK(plain) }
+	}
+
+	TAB "Render"
+	{
+	    LAYOUT(vertical) STRETCH
+
+	    MARGIN(0.05) SPACING(2p)
+	    color.gad;		
+	    fire_color.gad;		
+	    fire_color_mult.gad;		
+	    color2.gad;		
+	    variation.gad;		
+	    seed.gad;		
+	    folder2.gad;		
+	    render_settings.gad;		
+	    folder0.gad;		
+
+	    { STRETCH(1,1) LOOK(plain) }
+	}
+    } 
+}
+
+dialog_norm.gad = 
+{
+    LAYOUT(vertical) SPACING(0.02) HSTRETCH LOOK(plain) 
+    input.row.join; 
+    bit_shapes.row.join; 
+    path.gad; 
+    error.gad; 
+    cache.row.join; 
+    folder1.gad; 
+} 
+// dialog.bot.ui
+
+extrastuffstowbar_minimize.val := 1;
+
+dialog = OPENNOTIFIER
+{
+    LAYOUT(vertical) SPACING(0.02) LOOK(bg) VALUE(open.val) HSTRETCH
+
+    { HEIGHT(1p) LOOK(bg) HSTRETCH }
+
+    dialog_norm.gad;
+}

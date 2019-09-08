@@ -1,0 +1,86 @@
+// Magic: d802c522
+// Automatically generated PSI dialog (PSI version 17.0.459)
+// Fri Mar 15 23:08:55 2019
+
+
+f_tmp = FLOAT_FIELD;	// dialog.top.ui
+
+vel_source_attribute.gad = ROW
+{
+    HSTRETCH JUSTIFY(left, center)
+
+    vel_source_attribute.label = PARM_LABEL("Source Attribute", "vel_source_attribute") WIDTH(1.5);
+    PARM_FIELD(string, "vel_source_attribute") VALUE(vel_source_attribute.val) 
+	LABELREF(vel_source_attribute.label) HSTRETCH;
+
+}
+velfield.gad = NULL { }
+
+viz_type.gad = 
+{
+    LAYOUT(horizontal) JUSTIFY(left, center) HSTRETCH
+
+    PARM_LABEL_SIMPLE("Visualize Type", "viz_type") WIDTH(1.5);
+    { WIDTH(0.09) }
+
+    viz_type.menu;
+
+    { HSTRETCH }
+
+}
+
+orient.gad = 
+{
+    LAYOUT(horizontal) JUSTIFY(left, center) HSTRETCH
+
+    PARM_LABEL_SIMPLE("Orientation", "orient") WIDTH(1.5);
+    { WIDTH(0.09) }
+
+    orient.menu;
+
+    { HSTRETCH }
+
+}
+
+div_size.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ div_size.label = PARM_LABEL("Division Size", "div_size") WIDTH(1.5);
+ PARM(float, 1, "div_size", none, none) RANGE(0,10)
+	 LABELREF(div_size.label) HSTRETCH;
+
+}
+
+plane_pos.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ plane_pos.label = PARM_LABEL("Plane Pos", "plane_pos") WIDTH(1.5);
+ PARM(float, 1, "plane_pos", none, none) RANGE(-1,1)
+	 LABELREF(plane_pos.label) HSTRETCH;
+
+}
+
+dialog_norm.gad = 
+{
+    LAYOUT(vertical) SPACING(0.02) HSTRETCH LOOK(plain) 
+    vel_source_attribute.gad; 
+    velfield.gad; 
+    viz_type.gad; 
+    orient.gad; 
+    div_size.gad; 
+    plane_pos.gad; 
+} 
+// dialog.bot.ui
+
+extrastuffstowbar_minimize.val := 1;
+
+dialog = OPENNOTIFIER
+{
+    LAYOUT(vertical) SPACING(0.02) LOOK(bg) VALUE(open.val) HSTRETCH
+
+    { HEIGHT(1p) LOOK(bg) HSTRETCH }
+
+    dialog_norm.gad;
+}

@@ -1,0 +1,178 @@
+// Magic: d9aa499
+// Automatically generated PSI dialog (PSI version 17.5.173)
+// Thu Jul 11 10:50:42 2019
+
+
+f_tmp = FLOAT_FIELD;	// dialog.top.ui
+startSrc.row.join =		
+{
+  LAYOUT(horizontal) HSTRETCH JUSTIFY(left, center)
+
+startSrc.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ startSrc.label = PARM_LABEL("Start Source", "startSrc") WIDTH(1.5);
+ PARM(float, 1, "startSrc", none, none) RANGE(0,300)
+	 LABELREF(startSrc.label) HSTRETCH;
+
+}
+
+endSrc.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ endSrc.label = PARM_LABEL("End Source", "endSrc") ;
+ PARM(float, 1, "endSrc", none, none) RANGE(0,300)
+	 LABELREF(endSrc.label) HSTRETCH;
+
+}
+}	// Template join.bot
+
+startTarget.row.join =		
+{
+  LAYOUT(horizontal) HSTRETCH JUSTIFY(left, center)
+
+startTarget.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ startTarget.label = PARM_LABEL("Start Target", "startTarget") WIDTH(1.5);
+ PARM(float, 1, "startTarget", none, none) RANGE(0,10)
+	 LABELREF(startTarget.label) HSTRETCH;
+
+}
+
+endTarget.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ endTarget.label = PARM_LABEL("End Target", "endTarget") ;
+ PARM(float, 1, "endTarget", none, none) RANGE(0,300)
+	 LABELREF(endTarget.label) HSTRETCH;
+
+}
+}	// Template join.bot
+
+
+lookup.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ lookup.label = PARM_LABEL("lookup", "lookup") WIDTH(1.5);
+ PARM(float, 1, "lookup", none, none) RANGE(0,10)
+	 LABELREF(lookup.label) HSTRETCH;
+
+}
+vectorNormalAttribs.row.join =		
+{
+  LAYOUT(horizontal) HSTRETCH JUSTIFY(left, center)
+
+vectorNormalAttribs.gad = ROW
+{
+    HSTRETCH JUSTIFY(left, center)
+
+    vectorNormalAttribs.label = PARM_LABEL("Vector/Normal Attribs", "vectorNormalAttribs") WIDTH(1.5);
+    PARM_FIELD(string, "vectorNormalAttribs") VALUE(vectorNormalAttribs.val) 
+	LABELREF(vectorNormalAttribs.label) HSTRETCH;
+
+    vectorNormalAttribs.menu SIZE(0.26, 0.26) LOOK(menuiconbutton);
+
+}
+
+allButton.gad = ROW
+{
+    JUSTIFY(left, center)
+
+    PARM_BUTTON("allButton", "All")
+	push VALUE(allButton.val);
+
+}
+
+noneButton.gad = ROW
+{
+    JUSTIFY(left, center)
+
+    {  }
+    { WIDTH(0.1) }
+
+    PARM_BUTTON("noneButton", "None")
+	push VALUE(noneButton.val);
+
+}
+}	// Template join.bot
+
+quatAttribs.row.join =		
+{
+  LAYOUT(horizontal) HSTRETCH JUSTIFY(left, center)
+
+quatAttribs.gad = ROW
+{
+    HSTRETCH JUSTIFY(left, center)
+
+    quatAttribs.label = PARM_LABEL("Quaternion Attribs", "quatAttribs") WIDTH(1.5);
+    PARM_FIELD(string, "quatAttribs") VALUE(quatAttribs.val) 
+	LABELREF(quatAttribs.label) HSTRETCH;
+
+    quatAttribs.menu SIZE(0.26, 0.26) LOOK(menuiconbutton);
+
+}
+
+allButton2.gad = ROW
+{
+    JUSTIFY(left, center)
+
+    PARM_BUTTON("allButton2", "All")
+	push VALUE(allButton2.val);
+
+}
+
+noneButton2.gad = ROW
+{
+    JUSTIFY(left, center)
+
+    {  }
+    { WIDTH(0.1) }
+
+    PARM_BUTTON("noneButton2", "None")
+	push VALUE(noneButton2.val);
+
+}
+}	// Template join.bot
+
+
+attribFolder.gad = 
+GROUP simple "Attributes"
+{ 
+    VALUE(attribFolder.gad.val) LAYOUT(vertical) HSTRETCH 
+	    vectorNormalAttribs.row.join;		
+	    quatAttribs.row.join;		
+} 
+
+retimeFolder.gad = 
+GROUP simple "Retime"
+{ 
+    VALUE(retimeFolder.gad.val) LAYOUT(vertical) HSTRETCH 
+	    startSrc.row.join;		
+	    startTarget.row.join;		
+	    lookup.gad;		
+} 
+
+dialog_norm.gad = 
+{
+    LAYOUT(vertical) SPACING(0.02) HSTRETCH LOOK(plain) 
+    retimeFolder.gad; 
+    attribFolder.gad; 
+} 
+// dialog.bot.ui
+
+extrastuffstowbar_minimize.val := 1;
+
+dialog = OPENNOTIFIER
+{
+    LAYOUT(vertical) SPACING(0.02) LOOK(bg) VALUE(open.val) HSTRETCH
+
+    { HEIGHT(1p) LOOK(bg) HSTRETCH }
+
+    dialog_norm.gad;
+}

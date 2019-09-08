@@ -1,0 +1,118 @@
+// Magic: e2f9c527
+// Automatically generated PSI dialog (PSI version 17.5.173)
+// Fri Jun 21 16:11:47 2019
+
+
+f_tmp = FLOAT_FIELD;	// dialog.top.ui
+run.row.join =		
+{
+  LAYOUT(horizontal) HSTRETCH JUSTIFY(left, center)
+
+run.gad = ROW
+{
+    JUSTIFY(left, center)
+
+    PARM_BUTTON("run", "Run")
+	push VALUE(run.val);
+
+}
+
+sepparm.gad = 
+
+{
+    LAYOUT(vertical) HSTRETCH 
+
+    { HEIGHT(0.1) }
+    SEPARATOR; 
+    { HEIGHT(0.1) }
+}
+}	// Template join.bot
+
+
+sepparm2.gad = 
+
+{
+    LAYOUT(vertical) HSTRETCH 
+
+    { HEIGHT(0.1) }
+    SEPARATOR; 
+    { HEIGHT(0.1) }
+}
+
+option.gad = 
+{
+    LAYOUT(horizontal) JUSTIFY(left, center) HSTRETCH
+
+    PARM_LABEL_SIMPLE("Option", "option") WIDTH(1.5);
+    { WIDTH(0.09) }
+
+    option.menu;
+
+    { HSTRETCH }
+
+}
+
+file.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH JUSTIFY(left, center)
+
+ file.label = PARM_LABEL("File", "file") WIDTH(1.5);
+
+ PARM_FIELD (pathstring, "file") LABELREF(file.label)
+	VALUE(file.val) HSTRETCH;
+
+    file.menu SIZE(0.26, 0.26) LOOK(menuiconbutton);
+
+ ACTION_ICONBUTTON "BUTTONS_chooser_file" VALUE(file.plus) LOOKFLAT
+    HELP("Open floating file chooser") UI_FLAT_ICON_BTN_SIZE_SMALL;
+
+}
+
+code.gad = ROW
+{
+
+    HSTRETCH JUSTIFY(left, top)
+
+    code.label = PARM_LABEL("Code", "code");
+
+    MULTILINE_PARM_FIELD ("code") 
+
+    	LABELREF(code.label) 
+
+    	VALUE(code.val) 
+    	SYNTAX("python") 
+    	LINES(8,40) 
+    	HSTRETCH;
+
+    {
+
+	LAYOUT(vertical)
+	{
+	    SIZE(0, 0.26)
+	}
+
+    }
+
+}
+
+dialog_norm.gad = 
+{
+    LAYOUT(vertical) SPACING(0.02) HSTRETCH LOOK(plain) 
+    run.row.join; 
+    sepparm2.gad; 
+    option.gad; 
+    file.gad; 
+    code.gad; 
+} 
+// dialog.bot.ui
+
+extrastuffstowbar_minimize.val := 1;
+
+dialog = OPENNOTIFIER
+{
+    LAYOUT(vertical) SPACING(0.02) LOOK(bg) VALUE(open.val) HSTRETCH
+
+    { HEIGHT(1p) LOOK(bg) HSTRETCH }
+
+    dialog_norm.gad;
+}

@@ -1,0 +1,1 @@
+{"body": [{"indent": 0, "type": "title", "text": ["CoolLava"]}, {"indent": 0, "type": "para", "extent": [0, 86], "text": ["This example demonstrates how to cool Lava \nusing the Cool Within Object shelf tool."]}], "examplefile": "/examples/nodes/sop/fluidsource/CoolLava.otl", "type": "root", "attrs": {"type": "example"}, "examplefor": "/nodes/sop/fluidsource"}

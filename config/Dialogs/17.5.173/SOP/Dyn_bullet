@@ -1,0 +1,156 @@
+// Magic: b6478cf6
+// Automatically generated PSI dialog (PSI version 17.5.173)
+// Mon Jul  1 18:41:17 2019
+
+
+f_tmp = FLOAT_FIELD;	// dialog.top.ui
+
+collisionPadding.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ collisionPadding.label = PARM_LABEL("Collision Padding", "collisionPadding") WIDTH(1.5);
+ PARM(float, 1, "collisionPadding", none, none) RANGE(0,0.10000000000000001)
+	 LABELREF(collisionPadding.label) HSTRETCH;
+
+}
+
+simActFAttrib.gad = ROW
+{
+    HSTRETCH JUSTIFY(left, center)
+
+    simActFAttrib.label = PARM_LABEL("simActF Attrib", "simActFAttrib") WIDTH(1.5);
+    PARM_FIELD(string, "simActFAttrib") VALUE(simActFAttrib.val) 
+	LABELREF(simActFAttrib.label) HSTRETCH;
+
+}
+groundPlaneToggle.row.join =		
+{
+  LAYOUT(horizontal) HSTRETCH JUSTIFY(left, center)
+
+groundPlaneToggle.gad = ROW
+{
+    
+
+    PARM_BUTTON("groundPlaneToggle", "Use Groundplane") toggle VALUE(groundPlaneToggle.val);
+
+    {  }
+
+}
+
+sepparm.gad = 
+
+{
+    LAYOUT(vertical) HSTRETCH 
+
+    { HEIGHT(0.1) }
+    SEPARATOR; 
+    { HEIGHT(0.1) }
+}
+}	// Template join.bot
+
+
+force.gad = ROW
+{
+   HSTRETCH
+
+   force.label = PARM_LABEL("force", "force") WIDTH(1.5);
+   PARM(float, 3, "force", none, none, "X,Y,Z")
+	RANGE(-1,1)  LABELREF(force.label)
+	HSTRETCH;
+
+}
+
+height.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ height.label = PARM_LABEL("height", "height") WIDTH(1.5);
+ PARM(float, 1, "height", none, none) RANGE(0,10)
+	 LABELREF(height.label) HSTRETCH;
+
+}
+
+bounce.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ bounce.label = PARM_LABEL("Bounce", "bounce") WIDTH(1.5);
+ PARM(float, 1, "bounce", none, none) RANGE(0,1)
+	 LABELREF(bounce.label) HSTRETCH;
+
+}
+
+bounceforward.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ bounceforward.label = PARM_LABEL("Bounce Forward", "bounceforward") WIDTH(1.5);
+ PARM(float, 1, "bounceforward", none, none) RANGE(0,1)
+	 LABELREF(bounceforward.label) HSTRETCH;
+
+}
+
+friction.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ friction.label = PARM_LABEL("Friction", "friction") WIDTH(1.5);
+ PARM(float, 1, "friction", none, none) RANGE(0,1)
+	 LABELREF(friction.label) HSTRETCH;
+
+}
+
+dynamicfriction.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ dynamicfriction.label = PARM_LABEL("Dynamic Friction Scale", "dynamicfriction") WIDTH(1.5);
+ PARM(float, 1, "dynamicfriction", none, none) RANGE(0,1)
+	 LABELREF(dynamicfriction.label) HSTRETCH;
+
+}
+
+temperature.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ temperature.label = PARM_LABEL("Temperature", "temperature") WIDTH(1.5);
+ PARM(float, 1, "temperature", none, none) RANGE(0,100)
+	 LABELREF(temperature.label) HSTRETCH;
+
+}
+
+ground.gad = 
+GROUP simple "ground"
+{ 
+    VALUE(ground.gad.val) LAYOUT(vertical) HSTRETCH 
+	    height.gad;		
+	    bounce.gad;		
+	    bounceforward.gad;		
+	    friction.gad;		
+	    dynamicfriction.gad;		
+	    temperature.gad;		
+} 
+
+dialog_norm.gad = 
+{
+    LAYOUT(vertical) SPACING(0.02) HSTRETCH LOOK(plain) 
+    collisionPadding.gad; 
+    simActFAttrib.gad; 
+    groundPlaneToggle.row.join; 
+    force.gad; 
+    ground.gad; 
+} 
+// dialog.bot.ui
+
+extrastuffstowbar_minimize.val := 1;
+
+dialog = OPENNOTIFIER
+{
+    LAYOUT(vertical) SPACING(0.02) LOOK(bg) VALUE(open.val) HSTRETCH
+
+    { HEIGHT(1p) LOOK(bg) HSTRETCH }
+
+    dialog_norm.gad;
+}

@@ -1,0 +1,127 @@
+// Magic: 18086825
+// Automatically generated PSI dialog (PSI version 17.5.173)
+// Sun Sep  1 17:40:40 2019
+
+
+f_tmp = FLOAT_FIELD;	// dialog.top.ui
+
+sepparm.gad = 
+
+{
+    LAYOUT(vertical) HSTRETCH 
+
+    { HEIGHT(0.1) }
+    SEPARATOR; 
+    { HEIGHT(0.1) }
+}
+
+anim_name.gad = ROW
+{
+    HSTRETCH JUSTIFY(left, center)
+
+    anim_name.label = PARM_LABEL("Animation Name", "anim_name") WIDTH(1.5);
+    PARM_FIELD(string, "anim_name") VALUE(anim_name.val) 
+	LABELREF(anim_name.label) HSTRETCH;
+
+}
+
+sepparm3.gad = 
+
+{
+    LAYOUT(vertical) HSTRETCH 
+
+    { HEIGHT(0.1) }
+    SEPARATOR; 
+    { HEIGHT(0.1) }
+}
+
+start_frame.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ start_frame.label = PARM_LABEL("Start Frame", "start_frame") WIDTH(1.5);
+ PARM(integer, 1, "start_frame", none, none) RANGE(0,10)
+	 LABELREF(start_frame.label) HSTRETCH;
+
+}
+
+end_frame.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ end_frame.label = PARM_LABEL("End Frame", "end_frame") WIDTH(1.5);
+ PARM(integer, 1, "end_frame", none, none) RANGE(0,10)
+	 LABELREF(end_frame.label) HSTRETCH;
+
+}
+
+sepparm4.gad = 
+
+{
+    LAYOUT(vertical) HSTRETCH 
+
+    { HEIGHT(0.1) }
+    SEPARATOR; 
+    { HEIGHT(0.1) }
+}
+
+stash.gad = ROW
+{
+    HSTRETCH
+
+    { WIDTH(1.5) }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("stash", "Stash baked inputs") toggle VALUE(stash.val);
+
+    { HSTRETCH }
+
+}
+
+sepparm2.gad = 
+
+{
+    LAYOUT(vertical) HSTRETCH 
+
+    { HEIGHT(0.1) }
+    SEPARATOR; 
+    { HEIGHT(0.1) }
+}
+
+bake.gad = ROW
+{
+    JUSTIFY(left, center)
+
+    { WIDTH(1.5) }
+    { WIDTH(0.1) }
+
+    PARM_BUTTON("bake", "          Bake          ")
+	push VALUE(bake.val);
+
+}
+
+dialog_norm.gad = 
+{
+    LAYOUT(vertical) SPACING(0.02) HSTRETCH LOOK(plain) 
+    sepparm.gad; 
+    anim_name.gad; 
+    sepparm3.gad; 
+    start_frame.gad; 
+    end_frame.gad; 
+    sepparm4.gad; 
+    stash.gad; 
+    sepparm2.gad; 
+    bake.gad; 
+} 
+// dialog.bot.ui
+
+extrastuffstowbar_minimize.val := 1;
+
+dialog = OPENNOTIFIER
+{
+    LAYOUT(vertical) SPACING(0.02) LOOK(bg) VALUE(open.val) HSTRETCH
+
+    { HEIGHT(1p) LOOK(bg) HSTRETCH }
+
+    dialog_norm.gad;
+}

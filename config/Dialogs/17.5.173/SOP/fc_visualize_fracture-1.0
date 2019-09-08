@@ -1,0 +1,623 @@
+// Magic: 2565495b
+// Automatically generated PSI dialog (PSI version 17.5.173)
+// Thu Sep  5 23:00:21 2019
+
+
+f_tmp = FLOAT_FIELD;	// dialog.top.ui
+
+sepparm.gad = 
+
+{
+    LAYOUT(vertical) HSTRETCH 
+
+    { HEIGHT(0.1) }
+    SEPARATOR; 
+    { HEIGHT(0.1) }
+}
+
+lbl_num_frags.sval := 16;
+
+lbl_num_frags.gad = 
+{
+    LAYOUT(vertical) SPACING(1p) HSTRETCH VMARGIN(0.05, 0)
+
+    SWITCHER tight
+    {
+	VALUE(lbl_num_frags.sval) HSTRETCH
+
+        {
+            LAYOUT(horizontal) HSTRETCH
+
+	    LABEL "Num Fragments: " HSTRETCH;
+
+        }
+
+        {
+            LAYOUT(horizontal) HSTRETCH
+
+            LABEL "Num Fragments: ":1.5 JUSTIFY(right, center);
+
+            LABEL VALUE(lbl_num_frags.val[0]) JUSTIFY(center,center) HSTRETCH;
+        }
+
+        {
+            LAYOUT(horizontal) HSTRETCH
+
+            LABEL "Num Fragments: ":1.5 JUSTIFY(right, center);
+
+            LABEL VALUE(lbl_num_frags.val[0]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[1]) JUSTIFY(center,center) HSTRETCH;
+        }
+
+        {
+            LAYOUT(horizontal) HSTRETCH
+
+            LABEL "Num Fragments: ":1.5 JUSTIFY(right, center);
+
+            LABEL VALUE(lbl_num_frags.val[0]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[1]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[2]) JUSTIFY(center,center) HSTRETCH;
+        }
+
+        {
+            LAYOUT(horizontal) HSTRETCH
+
+            LABEL "Num Fragments: ":1.5 JUSTIFY(right, center);
+
+            LABEL VALUE(lbl_num_frags.val[0]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[1]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[2]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[3]) JUSTIFY(center,center) HSTRETCH;
+        }
+
+        {
+            LAYOUT(horizontal) HSTRETCH
+
+            LABEL "Num Fragments: ":1.5 JUSTIFY(right, center);
+
+            LABEL VALUE(lbl_num_frags.val[0]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[1]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[2]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[3]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[4]) JUSTIFY(center,center) HSTRETCH;
+        }
+
+        {
+            LAYOUT(horizontal) HSTRETCH
+
+            LABEL "Num Fragments: ":1.5 JUSTIFY(right, center);
+
+            LABEL VALUE(lbl_num_frags.val[0]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[1]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[2]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[3]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[4]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[5]) JUSTIFY(center,center) HSTRETCH;
+        }
+
+        {
+            LAYOUT(horizontal) HSTRETCH
+
+            LABEL "Num Fragments: ":1.5 JUSTIFY(right, center);
+
+            LABEL VALUE(lbl_num_frags.val[0]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[1]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[2]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[3]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[4]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[5]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[6]) JUSTIFY(center,center) HSTRETCH;
+        }
+
+        {
+            LAYOUT(horizontal) HSTRETCH
+
+            LABEL "Num Fragments: ":1.5 JUSTIFY(right, center);
+
+            LABEL VALUE(lbl_num_frags.val[0]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[1]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[2]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[3]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[4]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[5]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[6]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[7]) JUSTIFY(center,center) HSTRETCH;
+        }
+
+        {
+            LAYOUT(horizontal) HSTRETCH
+
+            LABEL "Num Fragments: ":1.5 JUSTIFY(right, center);
+
+            LABEL VALUE(lbl_num_frags.val[0]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[1]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[2]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[3]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[4]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[5]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[6]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[7]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[8]) JUSTIFY(center,center) HSTRETCH;
+        }
+
+        {
+            LAYOUT(horizontal) HSTRETCH
+
+            LABEL "Num Fragments: ":1.5 JUSTIFY(right, center);
+
+            LABEL VALUE(lbl_num_frags.val[0]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[1]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[2]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[3]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[4]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[5]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[6]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[7]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[8]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[9]) JUSTIFY(center,center) HSTRETCH;
+        }
+
+        {
+            LAYOUT(horizontal) HSTRETCH
+
+            LABEL "Num Fragments: ":1.5 JUSTIFY(right, center);
+
+            LABEL VALUE(lbl_num_frags.val[0]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[1]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[2]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[3]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[4]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[5]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[6]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[7]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[8]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[9]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[10]) JUSTIFY(center,center) HSTRETCH;
+        }
+
+        {
+            LAYOUT(horizontal) HSTRETCH
+
+            LABEL "Num Fragments: ":1.5 JUSTIFY(right, center);
+
+            LABEL VALUE(lbl_num_frags.val[0]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[1]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[2]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[3]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[4]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[5]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[6]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[7]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[8]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[9]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[10]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[11]) JUSTIFY(center,center) HSTRETCH;
+        }
+
+        {
+            LAYOUT(horizontal) HSTRETCH
+
+            LABEL "Num Fragments: ":1.5 JUSTIFY(right, center);
+
+            LABEL VALUE(lbl_num_frags.val[0]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[1]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[2]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[3]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[4]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[5]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[6]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[7]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[8]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[9]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[10]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[11]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[12]) JUSTIFY(center,center) HSTRETCH;
+        }
+
+        {
+            LAYOUT(horizontal) HSTRETCH
+
+            LABEL "Num Fragments: ":1.5 JUSTIFY(right, center);
+
+            LABEL VALUE(lbl_num_frags.val[0]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[1]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[2]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[3]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[4]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[5]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[6]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[7]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[8]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[9]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[10]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[11]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[12]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[13]) JUSTIFY(center,center) HSTRETCH;
+        }
+
+        {
+            LAYOUT(horizontal) HSTRETCH
+
+            LABEL "Num Fragments: ":1.5 JUSTIFY(right, center);
+
+            LABEL VALUE(lbl_num_frags.val[0]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[1]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[2]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[3]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[4]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[5]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[6]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[7]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[8]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[9]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[10]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[11]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[12]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[13]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[14]) JUSTIFY(center,center) HSTRETCH;
+        }
+
+        {
+            LAYOUT(horizontal) HSTRETCH
+
+            LABEL "Num Fragments: ":1.5 JUSTIFY(right, center);
+
+            LABEL VALUE(lbl_num_frags.val[0]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[1]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[2]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[3]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[4]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[5]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[6]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[7]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[8]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[9]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[10]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[11]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[12]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[13]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[14]) JUSTIFY(center,center) HSTRETCH;
+            LABEL VALUE(lbl_num_frags.val[15]) JUSTIFY(center,center) HSTRETCH;
+        }
+
+    }
+}
+
+visualize.gad = 
+{
+    LAYOUT(horizontal) JUSTIFY(left, center) HSTRETCH
+
+    PARM_LABEL_SIMPLE("Visualize", "visualize") WIDTH(1.5);
+    { WIDTH(0.1) }
+
+    visualize.buttonstrip;
+
+    { HSTRETCH }
+
+}
+
+inside_group.gad = ROW
+{
+    HSTRETCH JUSTIFY(left, center)
+
+    inside_group.label = PARM_LABEL("Inside group", "inside_group") WIDTH(1.5);
+    PARM_FIELD(string, "inside_group") VALUE(inside_group.val) 
+	LABELREF(inside_group.label) HSTRETCH;
+
+}
+
+sepparm2.gad = 
+
+{
+    LAYOUT(vertical) HSTRETCH 
+
+    { HEIGHT(0.1) }
+    SEPARATOR; 
+    { HEIGHT(0.1) }
+}
+use_frag_filter.row.join =		
+{
+  LAYOUT(horizontal) HSTRETCH JUSTIFY(left, center)
+
+use_frag_filter.gad = ROW
+{
+    
+
+    PARM_BUTTON("use_frag_filter", "use") toggle VALUE(use_frag_filter.val);
+
+    {  }
+
+}
+
+frag_index.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ frag_index.label = PARM_LABEL("frag #", "frag_index") ;
+ PARM(integer, 1, "frag_index", none, none) RANGE(0,100)
+	 LABELREF(frag_index.label) HSTRETCH;
+
+}
+
+multi_frag_filter.gad = ROW
+{
+    
+
+    PARM_BUTTON("multi_frag_filter", "Multi") toggle VALUE(multi_frag_filter.val);
+
+    {  }
+
+}
+
+frag_range.gad = ROW
+{
+    HSTRETCH JUSTIFY(left, center)
+
+    frag_range.label = PARM_LABEL("frag range:", "frag_range") ;
+    PARM_FIELD(string, "frag_range") VALUE(frag_range.val) 
+	LABELREF(frag_range.label) HSTRETCH;
+
+}
+}	// Template join.bot
+
+color_pieces.row.join =		
+{
+  LAYOUT(horizontal) HSTRETCH JUSTIFY(left, center)
+
+color_pieces.gad = ROW
+{
+    
+
+    PARM_BUTTON("color_pieces", "Color Pieces") toggle VALUE(color_pieces.val);
+
+    {  }
+
+}
+
+color_inside_outside.gad = ROW
+{
+    
+
+    PARM_BUTTON("color_inside_outside", "Inside/Outside faces") toggle VALUE(color_inside_outside.val);
+
+    {  }
+
+}
+
+color_seed.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ color_seed.label = PARM_LABEL("Rand Seed", "color_seed") ;
+ PARM(float, 1, "color_seed", none, none) RANGE(0,10)
+	 LABELREF(color_seed.label) HSTRETCH;
+
+}
+}	// Template join.bot
+
+exploded_view.row.join =		
+{
+  LAYOUT(horizontal) HSTRETCH JUSTIFY(left, center)
+
+exploded_view.gad = ROW
+{
+    
+
+    PARM_BUTTON("exploded_view", "Exploded view") toggle VALUE(exploded_view.val);
+
+    {  }
+
+}
+
+scale.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ scale.label = PARM_LABEL("Scale", "scale") ;
+ PARM(float, 1, "scale", none, none) RANGE(0,1)
+	 LABELREF(scale.label) HSTRETCH;
+
+}
+}	// Template join.bot
+
+show_uv.row.join =		
+{
+  LAYOUT(horizontal) HSTRETCH JUSTIFY(left, center)
+
+show_uv.gad = ROW
+{
+    
+
+    PARM_BUTTON("show_uv", "Show UVs") toggle VALUE(show_uv.val);
+
+    {  }
+
+}
+
+uv_size.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ uv_size.label = PARM_LABEL("Size", "uv_size") ;
+ PARM(float, 1, "uv_size", none, none) RANGE(0,10)
+	 LABELREF(uv_size.label) HSTRETCH;
+
+}
+}	// Template join.bot
+
+show_volume.row.join =		
+{
+  LAYOUT(horizontal) HSTRETCH JUSTIFY(left, center)
+
+show_volume.gad = ROW
+{
+    
+
+    PARM_BUTTON("show_volume", "Show Volume") toggle VALUE(show_volume.val);
+
+    {  }
+
+}
+
+vol_attr_name.gad = ROW
+{
+    HSTRETCH JUSTIFY(left, center)
+
+    vol_attr_name.label = PARM_LABEL("Volume attr name", "vol_attr_name") ;
+    PARM_FIELD(string, "vol_attr_name") VALUE(vol_attr_name.val) 
+	LABELREF(vol_attr_name.label) HSTRETCH;
+
+}
+}	// Template join.bot
+
+
+vol_vis_gradient.si_rampedit = COLOR_RAMP VALUE(vol_vis_gradient.ramp_val)
+			LAYOUT(horizontal)  HSTRETCH;
+
+vol_vis_gradient.multiramp = 
+{
+    LAYOUT(vertical) STRETCH
+
+    ROW
+    {
+	LOOK(plain) JUSTIFY(left,center) SPACING(0.1) VMARGIN(0.02) HSTRETCH
+
+	COL
+	{
+	    JUSTIFY(right,center) WIDTH(1.5)
+	    LABEL "Point No.";
+	}
+
+	vol_vis_gradient.pointno.gad
+	    = INT_SLIDER_FIELD VALUE(vol_vis_gradient.pointno.val) HSTRETCH;
+    }
+}
+
+vol_vis_gradient.buttons.gad = COL
+{
+    VSTRETCH
+
+    ICON_BUTTON_STRIP
+    {
+	LAYOUT(horizontal) INITSIZE(20p, 20p) 
+
+	ACTION_ICONBUTTON "BUTTONS_delete"
+		HELP("Remove Point") VALUE(vol_vis_gradient.delpoint.val);
+	ACTION_ICONBUTTON "BUTTONS_add"
+		HELP("Add Point") VALUE(vol_vis_gradient.addpoint.val);
+    }
+
+    { VSTRETCH }
+
+    vol_vis_gradient.toggleparms.gad
+      = ACTION_ICONBUTTON "BUTTONS_show_controls"
+	HELP("Hide Controls")
+	VALUE(vol_vis_gradient.toggle.val)
+	SENDSKEY("h.pane.parms.toggle_ramp_parms")
+	LOOKFLAT UI_FLAT_ICON_BTN_SIZE_TINY;
+}
+
+vol_vis_gradient.parm =
+{
+    LAYOUT(vertical) HSTRETCH JUSTIFY(left, center)
+
+    vol_vis_gradient.ramp.gad = ROW
+    {
+	MARGIN(0.02) SPACING(0.02) JUSTIFY(left, top) HSTRETCH
+
+	vol_vis_gradient.buttons.gad VSTRETCH;
+
+	vol_vis_gradient.si_rampedit HSTRETCH;
+    }
+}
+
+vol_vis_gradient.gad =
+{
+    LAYOUT(vertical) MARGIN(2p) HSTRETCH
+
+    {
+	LAYOUT(horizontal) HSTRETCH
+
+	PARM_LABEL_SIMPLE("Vol Vis Gradient", "vol_vis_gradient");
+
+	{ HSTRETCH }
+
+    }
+
+    {
+	LAYOUT(vertical) MARGIN(2p) SPACING(0.02) LOOK(lightline) HSTRETCH
+
+	vol_vis_gradient.parm;
+
+	SWITCHER tight
+	{
+	    LAYOUT(overlap) VALUE(vol_vis_gradient.hideparms.val) HSTRETCH
+	    vol_vis_gradient.multiramp;
+	    {}
+	}
+    }
+}
+
+folder1.gad = 
+GROUP simple " "
+{ 
+    VALUE(folder1.gad.val) LAYOUT(vertical) HSTRETCH 
+	    vol_vis_gradient.gad;		
+} 
+
+folder0.gad = 
+{
+    LAYOUT(vertical) HSTRETCH
+
+    TABDIALOG2 "folder0.gad"
+    { 
+	VALUE(folder0.gad.val) STRETCH(1,0)
+
+	TAB "Fragment Filter"
+	{
+	    LAYOUT(vertical) STRETCH
+
+	    MARGIN(0.05) SPACING(2p)
+	    use_frag_filter.row.join;		
+
+	    { STRETCH(1,1) LOOK(plain) }
+	}
+
+	TAB "Display Options"
+	{
+	    LAYOUT(vertical) STRETCH
+
+	    MARGIN(0.05) SPACING(2p)
+	    color_pieces.row.join;		
+	    exploded_view.row.join;		
+	    show_uv.row.join;		
+	    show_volume.row.join;		
+	    folder1.gad;		
+
+	    { STRETCH(1,1) LOOK(plain) }
+	}
+    } 
+}
+
+dialog_norm.gad = 
+{
+    LAYOUT(vertical) SPACING(0.02) HSTRETCH LOOK(plain) 
+    sepparm.gad; 
+    lbl_num_frags.gad; 
+    visualize.gad; 
+    inside_group.gad; 
+    sepparm2.gad; 
+    folder0.gad; 
+} 
+// dialog.bot.ui
+
+extrastuffstowbar_minimize.val := 1;
+
+dialog = OPENNOTIFIER
+{
+    LAYOUT(vertical) SPACING(0.02) LOOK(bg) VALUE(open.val) HSTRETCH
+
+    { HEIGHT(1p) LOOK(bg) HSTRETCH }
+
+    dialog_norm.gad;
+}

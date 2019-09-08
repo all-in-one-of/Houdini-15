@@ -1,0 +1,197 @@
+// Magic: fdf5dbf8
+// Automatically generated PSI dialog (PSI version 17.5.173)
+// Wed Jul  3 19:53:54 2019
+
+
+f_tmp = FLOAT_FIELD;	// dialog.top.ui
+switch.gad = NULL { }
+
+loop_attribute.gad = ROW
+{
+    HSTRETCH JUSTIFY(left, center)
+
+    loop_attribute.label = PARM_LABEL("loop_attribute", "loop_attribute") WIDTH(1.5);
+    PARM_FIELD(string, "loop_attribute") VALUE(loop_attribute.val) 
+	LABELREF(loop_attribute.label) HSTRETCH;
+
+}
+sepparm.gad = NULL { }
+fracture_name.gad = NULL { }
+
+npts.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ npts.label = PARM_LABEL("scatter", "npts") WIDTH(1.5);
+ PARM(integer, 1, "npts", none, none) RANGE(1,100000)
+	 LABELREF(npts.label) HSTRETCH;
+
+}
+
+seed.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ seed.label = PARM_LABEL("seed", "seed") WIDTH(1.5);
+ PARM(integer, 1, "seed", none, none) RANGE(0,10)
+	 LABELREF(seed.label) HSTRETCH;
+
+}
+
+scale.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ scale.label = PARM_LABEL("Scale", "scale") WIDTH(1.5);
+ PARM(float, 1, "scale", none, none) RANGE(0,10)
+	 LABELREF(scale.label) HSTRETCH;
+
+}
+
+emergencylimit.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ emergencylimit.label = PARM_LABEL("Max Points", "emergencylimit") WIDTH(1.5);
+ PARM(integer, 1, "emergencylimit", none, none) RANGE(1000,10000000)
+	 LABELREF(emergencylimit.label) HSTRETCH;
+
+}
+
+freq4.gad = ROW
+{
+   HSTRETCH
+
+   freq4.label = PARM_LABEL("Frequency", "freq4") WIDTH(1.5);
+   PARM(float, 3, "freq4", none, none, "#1,#2,#3")
+	RANGE(0,10)  LABELREF(freq4.label)
+	HSTRETCH;
+
+}
+
+offset4.gad = ROW
+{
+   HSTRETCH
+
+   offset4.label = PARM_LABEL("Offset", "offset4") WIDTH(1.5);
+   PARM(float, 3, "offset4", none, none, "#1,#2,#3")
+	RANGE(0,10)  LABELREF(offset4.label)
+	HSTRETCH;
+
+}
+
+amp2.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ amp2.label = PARM_LABEL("Amplitude", "amp2") WIDTH(1.5);
+ PARM(float, 1, "amp2", none, none) RANGE(-1,1)
+	 LABELREF(amp2.label) HSTRETCH;
+
+}
+
+rough.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ rough.label = PARM_LABEL("Roughness", "rough") WIDTH(1.5);
+ PARM(float, 1, "rough", none, none) RANGE(0,1)
+	 LABELREF(rough.label) HSTRETCH;
+
+}
+
+voxelsize.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ voxelsize.label = PARM_LABEL("Voxel Size", "voxelsize") WIDTH(1.5);
+ PARM(float, 1, "voxelsize", none, none) RANGE(0,5)
+	LOCK_RANGE_MIN LABELREF(voxelsize.label) HSTRETCH;
+
+}
+
+freq.gad = ROW
+{
+   HSTRETCH
+
+   freq.label = PARM_LABEL("Frequency", "freq") WIDTH(1.5);
+   PARM(float, 3, "freq", none, none, "#1,#2,#3")
+	RANGE(0,10)  LABELREF(freq.label)
+	HSTRETCH;
+
+}
+
+offset.gad = ROW
+{
+   HSTRETCH
+
+   offset.label = PARM_LABEL("Offset", "offset") WIDTH(1.5);
+   PARM(float, 3, "offset", none, none, "#1,#2,#3")
+	RANGE(0,10)  LABELREF(offset.label)
+	HSTRETCH;
+
+}
+
+amp.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ amp.label = PARM_LABEL("Amplitude", "amp") WIDTH(1.5);
+ PARM(float, 1, "amp", none, none) RANGE(-1,1)
+	 LABELREF(amp.label) HSTRETCH;
+
+}
+
+folder1.gad = 
+GROUP simple "volume controls"
+{ 
+    VALUE(folder1.gad.val) LAYOUT(vertical) HSTRETCH 
+	    voxelsize.gad;		
+	    freq.gad;		
+	    offset.gad;		
+	    amp.gad;		
+} 
+
+folder0.gad = 
+GROUP simple "fracture_controls"
+{ 
+    VALUE(folder0.gad.val) LAYOUT(vertical) HSTRETCH 
+	    npts.gad;		
+	    seed.gad;		
+	    scale.gad;		
+	    emergencylimit.gad;		
+	    freq4.gad;		
+	    offset4.gad;		
+	    amp2.gad;		
+	    rough.gad;		
+} 
+
+main_controls.gad = 
+GROUP simple "main_controls"
+{ 
+    VALUE(main_controls.gad.val) LAYOUT(vertical) HSTRETCH 
+	    switch.gad;		
+	    loop_attribute.gad;		
+	    sepparm.gad;		
+	    fracture_name.gad;		
+} 
+
+dialog_norm.gad = 
+{
+    LAYOUT(vertical) SPACING(0.02) HSTRETCH LOOK(plain) 
+    main_controls.gad; 
+    folder0.gad; 
+    folder1.gad; 
+} 
+// dialog.bot.ui
+
+extrastuffstowbar_minimize.val := 1;
+
+dialog = OPENNOTIFIER
+{
+    LAYOUT(vertical) SPACING(0.02) LOOK(bg) VALUE(open.val) HSTRETCH
+
+    { HEIGHT(1p) LOOK(bg) HSTRETCH }
+
+    dialog_norm.gad;
+}

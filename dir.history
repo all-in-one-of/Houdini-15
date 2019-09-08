@@ -1,0 +1,58 @@
+HIP
+{
+D:/Job/Study/CGCircuit/Applided_Houdini/Rigid_Body_2/
+D:/Job/Project/RnD/Deform/
+D:/Job/Exam/active_control/
+C:/Users/user/Desktop/backup/
+C:/Users/user/Desktop/
+D:/Job/Study/Daily_test/
+D:/Job/Study/Rebelway/Destruction/
+C:/Users/user/Documents/카카오톡 받은 파일/
+D:/Job/Study/Rebelway/VEX/
+D:/Job/Study/CGCircuit/Applided_Houdini/Rigid_Body_3/
+D:/Job/Study/FX_Guild/KSH/Module_5/
+C:/Users/user/Downloads/
+}
+PIC
+{
+$HFS/houdini/pic/
+}
+GEO
+{
+$HIP/cache/ground_frac_v08/
+$HIP/cache/week_4_sim_v08/
+D:/Job/Study/Rebelway/Destruction/cache/week_4_sim_v09/
+$HIP/cache/week_4_sim_v09/
+$HIP/geo/
+$HIP/cache/tile_con_cache_v02/
+$HIP/cache/kong_vdb_v01/
+$HIP/cache/rbd_vdb_v01/
+$HIP/cache/instance_hi/v`chs("../null1/iver")`/`prims('../
+D:/Job/Study/Rebelway/Destruction/cache/transform_wood_frames_v03/
+D:/Job/Study/Rebelway/Destruction/cache/rbd_upres_v03/
+$HIP/
+}
+OTL
+{
+C:/PROGRA~1/SIDEEF~1/HOUDIN~1.352/houdini/otls/
+C:/Users/user/Documents/houdini17.0/otls/
+C:/PROGRA~1/SIDEEF~1/HOUDIN~1.173/houdini/help/examples/nodes/dop/constraintnetwork/
+C:/Users/user/Documents/houdini17.5/otls/
+C:/Users/user/Downloads/
+C:/Users/user/Downloads/FC_Boolean_Tools_HDAs/
+}
+MISC
+{
+opparm `../
+opparm ../Controller/
+opparm ../
+opparm /obj/generator/
+opparm ../Controller seed `opdigits('.')`; opparm ../Controller/
+opparm ../Controller seed `opdigits('.')`; opparm /obj/generator/Controller/
+opparm /obj/generator/Controller seed `opdigits('.')`; opparm /obj/generator/Controller/
+C:/Users/user/Downloads/data/destruction-workshop_animation/
+C:/Users/user/Downloads/data/irex_animation_fight/
+C:/Users/user/Downloads/data/kong_animation_fight/
+$HIP/geo/
+$HIP/anim/kong_animation_fight/
+}

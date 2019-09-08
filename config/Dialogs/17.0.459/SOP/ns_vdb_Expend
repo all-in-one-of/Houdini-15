@@ -1,0 +1,59 @@
+// Magic: 7217564e
+// Automatically generated PSI dialog (PSI version 17.0.459)
+// Fri Mar 15 23:15:13 2019
+
+
+f_tmp = FLOAT_FIELD;	// dialog.top.ui
+
+expendDist.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ expendDist.label = PARM_LABEL("expendDist", "expendDist") WIDTH(1.5);
+ PARM(float, 1, "expendDist", none, none) RANGE(0,500)
+	 LABELREF(expendDist.label) HSTRETCH;
+
+}
+
+asSdfExpand.gad = ROW
+{
+    HSTRETCH
+
+    { WIDTH(1.5) }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("asSdfExpand", "As SDF Expend") toggle VALUE(asSdfExpand.val);
+
+    { HSTRETCH }
+
+}
+
+fogisovalue.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ fogisovalue.label = PARM_LABEL("Fog Isovalue", "fogisovalue") WIDTH(1.5);
+ PARM(float, 1, "fogisovalue", none, none) RANGE(0,1)
+	 LABELREF(fogisovalue.label) HSTRETCH;
+
+}
+
+dialog_norm.gad = 
+{
+    LAYOUT(vertical) SPACING(0.02) HSTRETCH LOOK(plain) 
+    expendDist.gad; 
+    asSdfExpand.gad; 
+    fogisovalue.gad; 
+} 
+// dialog.bot.ui
+
+extrastuffstowbar_minimize.val := 1;
+
+dialog = OPENNOTIFIER
+{
+    LAYOUT(vertical) SPACING(0.02) LOOK(bg) VALUE(open.val) HSTRETCH
+
+    { HEIGHT(1p) LOOK(bg) HSTRETCH }
+
+    dialog_norm.gad;
+}

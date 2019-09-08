@@ -1,0 +1,158 @@
+// Magic: 54ca74c2
+// Automatically generated PSI dialog (PSI version 17.5.173)
+// Sat Jul 13 13:24:16 2019
+
+
+f_tmp = FLOAT_FIELD;	// dialog.top.ui
+
+constraintName.gad = ROW
+{
+    HSTRETCH JUSTIFY(left, center)
+
+    constraintName.label = PARM_LABEL("constraintName", "constraintName") WIDTH(1.5);
+    PARM_FIELD(string, "constraintName") VALUE(constraintName.val) 
+	LABELREF(constraintName.label) HSTRETCH;
+
+}
+
+constraintType.gad = ROW
+{
+    HSTRETCH JUSTIFY(left, center)
+
+    constraintType.label = PARM_LABEL("constraintType", "constraintType") WIDTH(1.5);
+    PARM_FIELD(string, "constraintType") VALUE(constraintType.val) 
+	LABELREF(constraintType.label) HSTRETCH;
+
+}
+
+sepparm.gad = 
+
+{
+    LAYOUT(vertical) HSTRETCH 
+
+    { HEIGHT(0.1) }
+    SEPARATOR; 
+    { HEIGHT(0.1) }
+}
+
+vizScatter.gad = ROW
+{
+    HSTRETCH
+
+    { WIDTH(1.5) }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("vizScatter", "vizScatter") toggle VALUE(vizScatter.val);
+
+    { HSTRETCH }
+
+}
+
+set1.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ set1.label = PARM_LABEL("scatter_amount", "set1") WIDTH(1.5);
+ PARM(integer, 1, "set1", none, none) RANGE(0,10)
+	 LABELREF(set1.label) HSTRETCH;
+
+}
+
+sepparm2.gad = 
+
+{
+    LAYOUT(vertical) HSTRETCH 
+
+    { HEIGHT(0.1) }
+    SEPARATOR; 
+    { HEIGHT(0.1) }
+}
+
+searchradius.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ searchradius.label = PARM_LABEL("Search Radius", "searchradius") WIDTH(1.5);
+ PARM(float, 1, "searchradius", none, none) RANGE(0,10)
+	 LABELREF(searchradius.label) HSTRETCH;
+
+}
+
+maxsearchpoints.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ maxsearchpoints.label = PARM_LABEL("Max Search Points", "maxsearchpoints") WIDTH(1.5);
+ PARM(integer, 1, "maxsearchpoints", none, none) RANGE(0,1000)
+	 LABELREF(maxsearchpoints.label) HSTRETCH;
+
+}
+
+maxconnections.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ maxconnections.label = PARM_LABEL("Max Connections", "maxconnections") WIDTH(1.5);
+ PARM(integer, 1, "maxconnections", none, none) RANGE(1,5)
+	 LABELREF(maxconnections.label) HSTRETCH;
+
+}
+
+sepparm3.gad = 
+
+{
+    LAYOUT(vertical) HSTRETCH 
+
+    { HEIGHT(0.1) }
+    SEPARATOR; 
+    { HEIGHT(0.1) }
+}
+
+breakAngle.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ breakAngle.label = PARM_LABEL("breakAngle", "breakAngle") WIDTH(1.5);
+ PARM(float, 1, "breakAngle", none, none) RANGE(0,10)
+	 LABELREF(breakAngle.label) HSTRETCH;
+
+}
+
+breakTorque.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ breakTorque.label = PARM_LABEL("breakTorque", "breakTorque") WIDTH(1.5);
+ PARM(float, 1, "breakTorque", none, none) RANGE(0,10)
+	 LABELREF(breakTorque.label) HSTRETCH;
+
+}
+
+dialog_norm.gad = 
+{
+    LAYOUT(vertical) SPACING(0.02) HSTRETCH LOOK(plain) 
+    constraintName.gad; 
+    constraintType.gad; 
+    sepparm.gad; 
+    vizScatter.gad; 
+    set1.gad; 
+    sepparm2.gad; 
+    searchradius.gad; 
+    maxsearchpoints.gad; 
+    maxconnections.gad; 
+    sepparm3.gad; 
+    breakAngle.gad; 
+    breakTorque.gad; 
+} 
+// dialog.bot.ui
+
+extrastuffstowbar_minimize.val := 1;
+
+dialog = OPENNOTIFIER
+{
+    LAYOUT(vertical) SPACING(0.02) LOOK(bg) VALUE(open.val) HSTRETCH
+
+    { HEIGHT(1p) LOOK(bg) HSTRETCH }
+
+    dialog_norm.gad;
+}

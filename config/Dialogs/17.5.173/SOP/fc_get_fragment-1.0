@@ -1,0 +1,40 @@
+// Magic: 3bc22d8b
+// Automatically generated PSI dialog (PSI version 17.5.173)
+// Thu Sep  5 22:59:03 2019
+
+
+f_tmp = FLOAT_FIELD;	// dialog.top.ui
+
+group.gad = ROW
+{
+    HSTRETCH JUSTIFY(left, center)
+
+    group.label = PARM_LABEL("Fragments", "group") WIDTH(1.5);
+    PARM_FIELD(string, "group") VALUE(group.val) 
+	LABELREF(group.label) HSTRETCH;
+
+    group.menu SIZE(0.26, 0.26) LOOK(menuiconbutton);
+
+    ACTION_ICONBUTTON "BUTTONS_reselect" VALUE(group.script_action)
+	HELP("Select geometry from an available viewport.")
+	UI_FLAT_ICON_BTN_SIZE_SMALL LOOKFLAT;
+
+}
+
+dialog_norm.gad = 
+{
+    LAYOUT(vertical) SPACING(0.02) HSTRETCH LOOK(plain) 
+    group.gad; 
+} 
+// dialog.bot.ui
+
+extrastuffstowbar_minimize.val := 1;
+
+dialog = OPENNOTIFIER
+{
+    LAYOUT(vertical) SPACING(0.02) LOOK(bg) VALUE(open.val) HSTRETCH
+
+    { HEIGHT(1p) LOOK(bg) HSTRETCH }
+
+    dialog_norm.gad;
+}
