@@ -1,17 +1,17 @@
 HIP
 {
-C:/Users/user/Desktop/matrix_v01.hip
-D:/Job/Study/Rebelway/VEX/Week_4_v01.hip
-D:/Job/Study/Rebelway/VEX/Week_5_v01.hip
-C:/Users/user/Desktop/destruction_various_way_v01.hip
-C:/Users/user/Downloads/Pop_collision_sdf.hip
-C:/Users/user/Downloads/Deform_v02.hip
-C:/Users/user/Desktop/mat_quat_v01.hip
-C:/Users/user/Downloads/tutorial.hipnc
-D:/Job/Study/Daily_test/190903_v01.hip
-C:/Users/user/Downloads/volumedeformBySpline_v05.hipnc
-C:/Users/user/Documents/카카오톡 받은 파일/destruction_various_way.hip
-D:/Job/Study/Rebelway/Destruction/new_Week_7_v01.hip
+D:/Job/Project/Pyro/helicopter_explosion/explosion_RnD_v02.hip
+D:/Job/Study/Rebelway/VEX/Week_8_v01.hip
+C:/Users/user/Documents/카카오톡 받은 파일/destruction_various_way_01.hip
+C:/Users/user/Downloads/inside_uv.hipnc
+C:/Users/user/Downloads/UV_by_FaceAngle.hip
+C:/Users/user/Downloads/MatchUVScale.hip
+D:/Job/Study/CGMA/Destruction/Week_2_v01.hip
+D:/Job/Study/CGMA/Destruction/Destruction_v01.hip
+C:/Users/user/Documents/카카오톡 받은 파일/bridge_break/bridge_model.hip
+C:/Users/user/Desktop/bridge_break/bridge_model.hip
+C:/Users/user/Desktop/untitled.hip
+D:/Job/Study/Balchagi/week_2_17.5.hip
 }
 PIC
 {
@@ -20,18 +20,18 @@ $HFS/houdini/pic/bacon.jpg
 }
 GEO
 {
-D:/Job/Study/CGCircuit/Applided_Houdini/Rigid_Body_2/cache/filecache1_v01/wedge/filecache1_v01_$F4.bgeo.sc
-D:/Job/Study/CGCircuit/Applided_Houdini/Rigid_Body_2/cache/filecache1_v01/wedge`chs("../null1/wedge")`/filecache1_v01_$F4.bgeo.sc
-D:/Job/Study/CGCircuit/Applided_Houdini/Rigid_Body_2/cache/filecache1_v01/wedge`chs("/obj/the_sim/null1/wedge")`/filecache1_v01_$F4.bgeo.sc
-D:/Job/Study/CGCircuit/Applided_Houdini/Rigid_Body_2/cache/filecache1_v01/wedge`detail('../foreach_count1/', 'iteration', 0)`/filecache1_v01_$F4.bgeo.sc
-D:/Job/Study/CGCircuit/Applided_Houdini/Rigid_Body_2/cache/filecache1_v01/filecache1_v01_$F4.bgeo.sc
-$HIP/cache/instance_hi/v`chs("../null1/iver")`/`prims('../blast2', 0, 'name')`.bgeo.sc
-D:/Job/Study/Rebelway/Destruction/cache/transform_wood_frames_v03/transform_wood_frames_v03_$F4.bgeo.sc
-$HIP/temp.bgeo
 D:/Job/Study/Rebelway/Destruction/cache/rbd_upres_v01/rbd_upres_v01_0075.bgeo.sc
 D:/Job/Study/Rebelway/Destruction/cache/rbd_upres_v03/rbd_upres_v03_$F4.bgeo.sc
 D:/Job/Study/Rebelway/Destruction/cache/upres_main_v02/upres_main_v02.bgeo.sc
 D:/Job/Study/Rebelway/Destruction/cache/rbd_upres_v01/rbd_upres_v01_$F4.bgeo.sc
+$HIP/geo/balcony_edge_destruction.bgeo.sc
+$HIP/geo/tour.bgeo.sc
+$HIP/geo/roof_support_planks.v1.bgeo.sc
+$HIP/geo/wall_upres_interior_named.v2.bgeo.sc
+$HIP/geo/left_wall.bgeo.sc
+C:/Users/user/Downloads/CGMA - Mastering Destruction in Houdini/CGMA - Mastering Destruction in Houdini Week 1/TowerTop-SquareBuilding.bgeo
+$HIP/geo/TowerTop-SquareBuilding.bgeo
+`chs("../untouched_geom/file")`
 }
 FONT
 {
@@ -39,11 +39,6 @@ Lato Bold
 }
 OTL
 {
-C:/Users/user/Documents/houdini17.0/otls/ns_volume_velocity_visualize.hda
-C:/PROGRA~1/SIDEEF~1/HOUDIN~1.173/houdini/help/examples/nodes/sop/clusterpoints/AnimatedSourcePoints.otl
-C:/PROGRA~1/SIDEEF~1/HOUDIN~1.173/houdini/help/examples/nodes/dop/constraintnetwork/GlueConstraintNetwork.otl
-C:/Users/user/Documents/houdini17.5/otls/debris_creator.hda
-C:/Users/user/Documents/houdini17.5/otls/recursive_fracture.hda
 C:/Users/user/Documents/houdini17.5/otls/piece_size_checker.hda
 C:/Users/user/Downloads/fc_bake_transform.hdalc
 C:/Users/user/Downloads/FC_Boolean_Tools_HDAs/fc_get_fragment.hdalc
@@ -51,19 +46,24 @@ C:/Users/user/Downloads/FC_Boolean_Tools_HDAs/fc_visualize_fracture.hdalc
 C:/Users/user/Downloads/FC_Boolean_Tools_HDAs/fc_process_boolean_geo.hdalc
 C:/Users/user/Downloads/FC_Boolean_Tools_HDAs/fc_build_lowpoly_fracture.hdalc
 C:/Users/user/Downloads/FC_Boolean_Tools_HDAs/fc_calc_frag_volumes.hdalc
+C:/Users/user/Documents/houdini17.5/otls/cutter_geometry.hda
+C:/Users/user/Documents/houdini17.5/otls/Shatter.hda
+C:/Users/user/Documents/houdini17.5/otls/measure_fracture.hda
+C:/Users/user/Documents/houdini17.5/otls/Voronoi_Cutter.hda
+C:/Users/user/Documents/houdini17.5/otls/Sub_Boolean_Fracture.hda
 }
 MISC
 {
-C:/Users/user/Downloads/data/irex_animation_fight/irex.abc
-C:/Users/user/Downloads/data/irex_animation_fight/irex_restpose.abc
-C:/Users/user/Downloads/data/kong_animation_fight/kong.abc
-C:/Users/user/Downloads/data/kong_animation_fight/kong_restpose.abc
-$HIP/geo/clean.abc
-$HIP/geo/helicopter.abc
-$HIP/anim/kong_animation_fight/kong.abc
-$HIP/anim/kong_animation_fight/kong_restpose.abc
+`chs("../../obj/clustering/cluster_3/file")`
 hou.parm('/obj/clustering/switch1/input').set(0)
 hou.parm('/obj/clustering/switch1/input').set(1)
 hou.parm('/obj/clustering/switch1/input').set(2)
 hou.parm('/obj/clustering/switch1/input').set(3)
+hou.parm('/obj/clustering/switch3/input').set(0)
+hou.parm('/obj/clustering/switch3/input').set(1)
+hou.parm('/obj/clustering/switch3/input').set(2)
+hou.parm('/obj/clustering/switch3/input').set(3)
+$HIP/geo/dinoMSC_01.abc
+$HIP/geo/destructionbuilding.v02.abc
+$HIP/geo/cam_render.abc
 }

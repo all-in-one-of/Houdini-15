@@ -1,0 +1,251 @@
+// Magic: 5d1815e6
+// Automatically generated PSI dialog (PSI version 17.5.173)
+// Sat Sep 14 18:17:52 2019
+
+
+f_tmp = FLOAT_FIELD;	// dialog.top.ui
+
+numCutters.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ numCutters.label = PARM_LABEL("Num Cutters", "numCutters") WIDTH(1.5);
+ PARM(integer, 1, "numCutters", none, none) RANGE(0,100)
+	LOCK_RANGE_MIN LABELREF(numCutters.label) HSTRETCH;
+
+}
+
+cutter_resolution.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ cutter_resolution.label = PARM_LABEL("Cutter Resolution", "cutter_resolution") WIDTH(1.5);
+ PARM(integer, 1, "cutter_resolution", none, none) RANGE(0,1000)
+	 LABELREF(cutter_resolution.label) HSTRETCH;
+
+}
+
+seed.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ seed.label = PARM_LABEL("Seed", "seed") WIDTH(1.5);
+ PARM(integer, 1, "seed", none, none) RANGE(0,10)
+	 LABELREF(seed.label) HSTRETCH;
+
+}
+
+add_cutter_id_attribute.gad = ROW
+{
+    HSTRETCH
+
+    { WIDTH(1.5) }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("add_cutter_id_attribute", "Add cutter_id Attribute") toggle VALUE(add_cutter_id_attribute.val);
+
+    { HSTRETCH }
+
+}
+
+sepparm.gad = 
+
+{
+    LAYOUT(vertical) HSTRETCH 
+
+    { HEIGHT(0.1) }
+    SEPARATOR; 
+    { HEIGHT(0.1) }
+}
+
+large_noise_amp.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ large_noise_amp.label = PARM_LABEL("Large Noise Amplitude", "large_noise_amp") WIDTH(1.5);
+ PARM(float, 1, "large_noise_amp", none, none) RANGE(0,200)
+	 LABELREF(large_noise_amp.label) HSTRETCH;
+
+}
+
+large_noise_size.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ large_noise_size.label = PARM_LABEL("Large Noise Size", "large_noise_size") WIDTH(1.5);
+ PARM(integer, 1, "large_noise_size", none, none) RANGE(0,500)
+	 LABELREF(large_noise_size.label) HSTRETCH;
+
+}
+
+large_noise_octaves.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ large_noise_octaves.label = PARM_LABEL("Large Noise Octaves", "large_noise_octaves") WIDTH(1.5);
+ PARM(integer, 1, "large_noise_octaves", none, none) RANGE(0,10)
+	 LABELREF(large_noise_octaves.label) HSTRETCH;
+
+}
+
+sepparm2.gad = 
+
+{
+    LAYOUT(vertical) HSTRETCH 
+
+    { HEIGHT(0.1) }
+    SEPARATOR; 
+    { HEIGHT(0.1) }
+}
+
+add_mesh_subdivisions.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ add_mesh_subdivisions.label = PARM_LABEL("Add Mesh Subdivisions", "add_mesh_subdivisions") WIDTH(1.5);
+ PARM(integer, 1, "add_mesh_subdivisions", none, none) RANGE(0,5)
+	 LABELREF(add_mesh_subdivisions.label) HSTRETCH;
+
+}
+
+small_noise_amp.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ small_noise_amp.label = PARM_LABEL("Small Noise Amplitude", "small_noise_amp") WIDTH(1.5);
+ PARM(float, 1, "small_noise_amp", none, none) RANGE(0,20)
+	 LABELREF(small_noise_amp.label) HSTRETCH;
+
+}
+
+small_noise_size.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ small_noise_size.label = PARM_LABEL("Small Noise Size", "small_noise_size") WIDTH(1.5);
+ PARM(integer, 1, "small_noise_size", none, none) RANGE(0,20)
+	 LABELREF(small_noise_size.label) HSTRETCH;
+
+}
+
+small_noise_octaves.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ small_noise_octaves.label = PARM_LABEL("Small Noise Octaves", "small_noise_octaves") WIDTH(1.5);
+ PARM(integer, 1, "small_noise_octaves", none, none) RANGE(0,10)
+	 LABELREF(small_noise_octaves.label) HSTRETCH;
+
+}
+
+sepparm3.gad = 
+
+{
+    LAYOUT(vertical) HSTRETCH 
+
+    { HEIGHT(0.1) }
+    SEPARATOR; 
+    { HEIGHT(0.1) }
+}
+
+padding_multiplier.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ padding_multiplier.label = PARM_LABEL("Padding Multiplier", "padding_multiplier") WIDTH(1.5);
+ PARM(float, 1, "padding_multiplier", none, none) RANGE(0,10)
+	 LABELREF(padding_multiplier.label) HSTRETCH;
+
+}
+
+lower_padding.gad = ROW
+{
+   HSTRETCH
+
+   lower_padding.label = PARM_LABEL("Lower Padding", "lower_padding") WIDTH(1.5);
+   PARM(float, 3, "lower_padding", none, none, "X,Y,Z")
+	RANGE(-1,1)  LABELREF(lower_padding.label)
+	HSTRETCH;
+
+}
+
+upper_padding.gad = ROW
+{
+   HSTRETCH
+
+   upper_padding.label = PARM_LABEL("Upper Padding", "upper_padding") WIDTH(1.5);
+   PARM(float, 3, "upper_padding", none, none, "X,Y,Z")
+	RANGE(-1,1)  LABELREF(upper_padding.label)
+	HSTRETCH;
+
+}
+
+sepparm4.gad = 
+
+{
+    LAYOUT(vertical) HSTRETCH 
+
+    { HEIGHT(0.1) }
+    SEPARATOR; 
+    { HEIGHT(0.1) }
+}
+
+trim_outside_object.gad = ROW
+{
+    HSTRETCH
+
+    { WIDTH(1.5) }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("trim_outside_object", "Trim Outside Object") toggle VALUE(trim_outside_object.val);
+
+    { HSTRETCH }
+
+}
+
+expand_trim_object.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ expand_trim_object.label = PARM_LABEL("Expand Trim Obejct", "expand_trim_object") WIDTH(1.5);
+ PARM(float, 1, "expand_trim_object", none, none) RANGE(0,10)
+	 LABELREF(expand_trim_object.label) HSTRETCH;
+
+}
+
+dialog_norm.gad = 
+{
+    LAYOUT(vertical) SPACING(0.02) HSTRETCH LOOK(plain) 
+    numCutters.gad; 
+    cutter_resolution.gad; 
+    seed.gad; 
+    add_cutter_id_attribute.gad; 
+    sepparm.gad; 
+    large_noise_amp.gad; 
+    large_noise_size.gad; 
+    large_noise_octaves.gad; 
+    sepparm2.gad; 
+    add_mesh_subdivisions.gad; 
+    small_noise_amp.gad; 
+    small_noise_size.gad; 
+    small_noise_octaves.gad; 
+    sepparm3.gad; 
+    padding_multiplier.gad; 
+    lower_padding.gad; 
+    upper_padding.gad; 
+    sepparm4.gad; 
+    trim_outside_object.gad; 
+    expand_trim_object.gad; 
+} 
+// dialog.bot.ui
+
+extrastuffstowbar_minimize.val := 1;
+
+dialog = OPENNOTIFIER
+{
+    LAYOUT(vertical) SPACING(0.02) LOOK(bg) VALUE(open.val) HSTRETCH
+
+    { HEIGHT(1p) LOOK(bg) HSTRETCH }
+
+    dialog_norm.gad;
+}

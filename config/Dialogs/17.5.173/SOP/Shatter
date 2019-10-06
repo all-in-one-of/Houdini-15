@@ -1,0 +1,48 @@
+// Magic: 7de663c6
+// Automatically generated PSI dialog (PSI version 17.5.173)
+// Sun Oct  6 00:18:00 2019
+
+
+f_tmp = FLOAT_FIELD;	// dialog.top.ui
+
+namePrefix.gad = ROW
+{
+    HSTRETCH JUSTIFY(left, center)
+
+    namePrefix.label = PARM_LABEL("Name Prefix", "namePrefix") WIDTH(1.5);
+    PARM_FIELD(string, "namePrefix") VALUE(namePrefix.val) 
+	LABELREF(namePrefix.label) HSTRETCH;
+
+}
+
+detriangulate.gad = 
+{
+    LAYOUT(horizontal) JUSTIFY(left, center) HSTRETCH
+
+    PARM_LABEL_SIMPLE("Detriangulate", "detriangulate") WIDTH(1.5);
+    { WIDTH(0.09) }
+
+    detriangulate.menu;
+
+    { HSTRETCH }
+
+}
+
+dialog_norm.gad = 
+{
+    LAYOUT(vertical) SPACING(0.02) HSTRETCH LOOK(plain) 
+    namePrefix.gad; 
+    detriangulate.gad; 
+} 
+// dialog.bot.ui
+
+extrastuffstowbar_minimize.val := 1;
+
+dialog = OPENNOTIFIER
+{
+    LAYOUT(vertical) SPACING(0.02) LOOK(bg) VALUE(open.val) HSTRETCH
+
+    { HEIGHT(1p) LOOK(bg) HSTRETCH }
+
+    dialog_norm.gad;
+}

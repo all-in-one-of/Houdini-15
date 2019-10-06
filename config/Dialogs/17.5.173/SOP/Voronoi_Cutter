@@ -1,0 +1,197 @@
+// Magic: 5b34ce9b
+// Automatically generated PSI dialog (PSI version 17.5.173)
+// Sun Oct  6 14:39:02 2019
+
+
+f_tmp = FLOAT_FIELD;	// dialog.top.ui
+
+orientedbbox.gad = ROW
+{
+    HSTRETCH
+
+    { WIDTH(1.5) }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("orientedbbox", "Oriented Bounding Box") toggle VALUE(orientedbbox.val);
+
+    { HSTRETCH }
+
+}
+
+minpad.gad = ROW
+{
+   HSTRETCH
+
+   minpad.label = PARM_LABEL("Lower Padding", "minpad") WIDTH(1.5);
+   PARM(float, 3, "minpad", none, none, "X,Y,Z")
+	RANGE(-1,1)  LABELREF(minpad.label)
+	HSTRETCH;
+
+}
+
+maxpad.gad = ROW
+{
+   HSTRETCH
+
+   maxpad.label = PARM_LABEL("Upper Padding", "maxpad") WIDTH(1.5);
+   PARM(float, 3, "maxpad", none, none, "X,Y,Z")
+	RANGE(-1,1)  LABELREF(maxpad.label)
+	HSTRETCH;
+
+}
+
+npts.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ npts.label = PARM_LABEL("Force Total Count", "npts") WIDTH(1.5);
+ PARM(integer, 1, "npts", none, none) RANGE(1,100000)
+	 LABELREF(npts.label) HSTRETCH;
+
+}
+
+seed.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ seed.label = PARM_LABEL("Global Seed", "seed") WIDTH(1.5);
+ PARM(float, 1, "seed", none, none) RANGE(0,10)
+	 LABELREF(seed.label) HSTRETCH;
+
+}
+
+sepparm.gad = 
+
+{
+    LAYOUT(vertical) HSTRETCH 
+
+    { HEIGHT(0.1) }
+    SEPARATOR; 
+    { HEIGHT(0.1) }
+}
+
+target_edge.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ target_edge.label = PARM_LABEL("Mesh Resolusion", "target_edge") WIDTH(1.5);
+ PARM(float, 1, "target_edge", none, none) RANGE(0.001,1)
+	LOCK_RANGE_MIN LABELREF(target_edge.label) HSTRETCH;
+
+}
+
+voxeloffset.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ voxeloffset.label = PARM_LABEL("Expent Offset", "voxeloffset") WIDTH(1.5);
+ PARM(float, 1, "voxeloffset", none, none) RANGE(0,10)
+	LOCK_RANGE_MIN LABELREF(voxeloffset.label) HSTRETCH;
+
+}
+
+sepparm2.gad = 
+
+{
+    LAYOUT(vertical) HSTRETCH 
+
+    { HEIGHT(0.1) }
+    SEPARATOR; 
+    { HEIGHT(0.1) }
+}
+
+freq.gad = ROW
+{
+   HSTRETCH
+
+   freq.label = PARM_LABEL("Frequency", "freq") WIDTH(1.5);
+   PARM(float, 3, "freq", none, none, "#1,#2,#3")
+	RANGE(0,10)  LABELREF(freq.label)
+	HSTRETCH;
+
+}
+
+offset.gad = ROW
+{
+   HSTRETCH
+
+   offset.label = PARM_LABEL("Offset", "offset") WIDTH(1.5);
+   PARM(float, 3, "offset", none, none, "#1,#2,#3")
+	RANGE(0,10)  LABELREF(offset.label)
+	HSTRETCH;
+
+}
+
+amp.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH
+
+ amp.label = PARM_LABEL("Amplitude", "amp") WIDTH(1.5);
+ PARM(float, 1, "amp", none, none) RANGE(-1,1)
+	 LABELREF(amp.label) HSTRETCH;
+
+}
+
+clean_geometry.gad = ROW
+{
+    HSTRETCH
+
+    { WIDTH(1.5) }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("clean_geometry", "Clean Geometry") toggle VALUE(clean_geometry.val);
+
+    { HSTRETCH }
+
+}
+
+folder2.gad = 
+GROUP simple "Cutter Noise"
+{ 
+    VALUE(folder2.gad.val) LAYOUT(vertical) HSTRETCH 
+	    freq.gad;		
+	    offset.gad;		
+	    amp.gad;		
+} 
+
+folder1.gad = 
+GROUP simple "Voronoi Scatter"
+{ 
+    VALUE(folder1.gad.val) LAYOUT(vertical) HSTRETCH 
+	    npts.gad;		
+	    seed.gad;		
+} 
+
+folder0.gad = 
+GROUP simple "Voronoi Bound"
+{ 
+    VALUE(folder0.gad.val) LAYOUT(vertical) HSTRETCH 
+	    orientedbbox.gad;		
+	    minpad.gad;		
+	    maxpad.gad;		
+} 
+
+dialog_norm.gad = 
+{
+    LAYOUT(vertical) SPACING(0.02) HSTRETCH LOOK(plain) 
+    folder0.gad; 
+    folder1.gad; 
+    sepparm.gad; 
+    target_edge.gad; 
+    voxeloffset.gad; 
+    sepparm2.gad; 
+    folder2.gad; 
+    clean_geometry.gad; 
+} 
+// dialog.bot.ui
+
+extrastuffstowbar_minimize.val := 1;
+
+dialog = OPENNOTIFIER
+{
+    LAYOUT(vertical) SPACING(0.02) LOOK(bg) VALUE(open.val) HSTRETCH
+
+    { HEIGHT(1p) LOOK(bg) HSTRETCH }
+
+    dialog_norm.gad;
+}
